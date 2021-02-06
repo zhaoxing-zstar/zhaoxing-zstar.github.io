@@ -2,8 +2,10 @@
 layout: post
 title: "Jupyter Notebook更改默认工作路径"
 subtitle: ''
+date: 2021-02-04
 author: "Zstar"
 header-style: text
+header-img: "img/post-bg-js-module.jpg"
 tags:
   - Jupyter
 ---
