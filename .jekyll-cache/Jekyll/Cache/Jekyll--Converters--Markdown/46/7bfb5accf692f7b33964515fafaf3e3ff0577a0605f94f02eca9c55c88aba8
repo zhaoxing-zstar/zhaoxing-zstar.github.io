@@ -1,0 +1,22 @@
+I"I<h3 id="下载anaconda3">下载Anaconda3</h3>
+
+<p>首先从官网下载Anaconda3的Individual Edition, 下载好后打开Anaconda3 Prompt, 输入:
+jupyter notebook –generate-config:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jupyter notebook --generate-config
+</code></pre></div></div>
+
+<h3 id="打开配置文件">打开配置文件</h3>
+
+<p>输入完后，会显示文件产生的路径，按路径找到jupyter_notebook_config.py,用txt或者pycharm打开，
+按<code class="language-plaintext highlighter-rouge">ctrl+F</code>搜索notebook_dir,找到后填入想要设置的路径并保存（注意顺便Uncomment这一行，就是删掉前面的<code class="language-plaintext highlighter-rouge">#</code>号,加路径时最好前面加上<code class="language-plaintext highlighter-rouge">r</code>转义
+<img src="/img/jupyter/notebook_dir.png" alt="notebook_dir" /></p>
+
+<h3 id="修改jupyternotebook快捷方式的目标属性">修改JupyterNotebook快捷方式的目标属性</h3>
+
+<p>右击JupyterNotebook快捷方式，选择[属性]，删除[目标]属性中的[%USERPROFILE%]，点击[确定]</p>
+
+<p><img src="/img/jupyter/change_prop.png" alt="change_prop" /></p>
+
+<p>修改完成，再打开Anaconda Prompt输入jupyter notebook打开工作路径就发生变化了。</p>
+:ET
