@@ -11,5 +11,5 @@ tags:
 ---
 
 首先从官网下载Anaconda3的Individual Edition, 下载好后打开Anaconda3 Prompt, 输入:
-jupyter notebook --generate-config, 希望能好吧
+jupyter notebook --generate-config, 然后然后
 ![Jupyter-config](/img/tag-bg.jpg)
