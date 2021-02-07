@@ -17,6 +17,10 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
+# Site settings
+# Gems
+# from PR#40, to support local preview for Jekyll 3.0
+gems: [jekyll-paginate]
 
 title: Zstar Pages
 email: zstar@ustc.mail.edu.cn
@@ -42,6 +46,8 @@ page-mathjax: false
 # Build settings
 # from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
 markdown:           kramdown
+kramdown:
+  input: GFM
 paginate: 10
 plugins: [jekyll-paginate]
 # Gems
