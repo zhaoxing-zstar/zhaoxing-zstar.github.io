@@ -1,15 +1,9 @@
 ---
-layout: post
-title: "Nothing"
-subtitle: ''
-date: 2021-02-04
-author: "Zstar"
-header-style: text
-header-img: "img/post-bg-js-module.jpg"
-tags:
-  - Jupyter
+layout: page
+title: "数理方程课程主页"
+description: "2021春"
+header-img: "img/particle_2d.jpg"
 ---
 # 12324
 
-首先从官网下载Anaconda3的Individual Edition，下载好后打开Anaconda3 Prompt，输入:
-jupyter notebook --generate-config:
+这是数理方程课程主页，将会上传一些讲义，资料等,欢迎提问
