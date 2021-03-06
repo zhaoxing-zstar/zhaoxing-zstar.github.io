@@ -5,7 +5,7 @@ subtitle: "2021 Spring"
 date: 2021-03-06
 author: "Zstar"
 header-style: text
-header-img: "atomic1.jpg"
+header-img: "img/atomic1.jpg"
 tags:
   - mathematical physics
 ---
