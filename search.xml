@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>CS224n: Natural Language Processing with Deep Learning</title>
+    <url>/2022/06/09/NLP-with-DL/</url>
+    <content><![CDATA[<p>先占个坑，这里更课程笔记~</p>
+]]></content>
+      <categories>
+        <category>Learn</category>
+      </categories>
+      <tags>
+        <tag>NLP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Change the default working directory of Jupyter Notebook</title>
+    <url>/2021/02/04/Jupyter-Change-Dir/</url>
+    <content><![CDATA[<p><strong>后来发现好像直接从那个directory下面打开<code>Jupyter Lab</code>就可以…</strong></p>
+<h3 id="下载Anaconda3"><a href="#下载Anaconda3" class="headerlink" title="下载Anaconda3"></a>下载Anaconda3</h3><p>首先从官网下载Anaconda3的Individual Edition，下载好后打开Anaconda3 Prompt，输入:<br>jupyter notebook –generate-config:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">jupyter notebook --generate-config</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="打开配置文件"><a href="#打开配置文件" class="headerlink" title="打开配置文件"></a>打开配置文件</h3><p>输入完后，会显示文件产生的路径，按路径找到jupyter_notebook_config.py，用txt或者pycharm打开，<br>按<code>ctrl+F</code>搜索notebook_dir，找到后填入想要设置的路径并保存（注意顺便Uncomment这一行，就是删掉前面的<code>#</code>号,加路径时最好前面加上<code>r</code>转义<br><img src="/images/jupyter/notebook_dir.png" alt="notebook_dir"></p>
+<hr>
+<h3 id="修改JupyterNotebook快捷方式的目标属性"><a href="#修改JupyterNotebook快捷方式的目标属性" class="headerlink" title="修改JupyterNotebook快捷方式的目标属性"></a>修改JupyterNotebook快捷方式的目标属性</h3><p>右击JupyterNotebook快捷方式，选择[属性]，删除[目标]属性中的[%USERPROFILE%]，点击[确定]</p>
+<p><img src="/images/jupyter/change_prop.png" alt="change_prop"></p>
+<p>修改完成，再打开Anaconda Prompt输入jupyter notebook打开工作路径就发生变化了。</p>
+]]></content>
+      <categories>
+        <category>Settings</category>
+      </categories>
+      <tags>
+        <tag>Jupyter</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>GRE Experience</title>
+    <url>/2021/10/19/GRE-Experience/</url>
+    <content><![CDATA[<p>在飞机上没什么事来写篇GRE的经验吧。。。<br>我总共考过两次GRE</p>
+<ul>
+<li>第一次：153+168+3.5</li>
+<li>第二次：159+169+4.0</li>
+</ul>
+<p>GRE考试分为写作、Verbal、Quantitative三大部分。Verbal和Quantitative都是20个题，Verbal部分包括10个填空和10个阅读，时间为30min，Quantitative是20个数学题，考试时间35min，写作要写Issue和Argument两篇。<br>考试时顺序是：两篇写作+VQVQV  或 QVQVQ ， 据说写完写作那个1min等完是可以进入Q的加试，但我试了试好像并没有成功。虽然数学没有满分比较遗憾，我就主要说说用了哪些资料以及一些技巧吧，我提到的资料会放在最后的网盘里。</p>
+<h4 id="I-单词"><a href="#I-单词" class="headerlink" title="I. 单词"></a>I. 单词</h4><p>单词绝对是GRE考试的重中之重，建议反复背3000词到差不多能认识80%。我背过的词有：</p>
+<ol>
+<li>GRE3000词（手机app）</li>
+<li>六选二等价词（十分重要！！！）</li>
+<li>数学词汇（做题得知道什么意思啊）<br>大概就这些，再就是做题时候注重积累。</li>
+</ol>
+<h4 id="II-填空"><a href="#II-填空" class="headerlink" title="II. 填空"></a>II. 填空</h4><p>填空可以说是全靠单词和逻辑了，基本的取正、取反；冒号、分号、逗号；转折：yet, but, however, nevertheless知道，剩下就是刷机经了。还有最好能回顾下错题加深印象，通过刷机经培养做题思维可能更重要，因为我第二次考几乎没遇到原题…<br>4. 填空机经1500题</p>
+<h4 id="III-阅读"><a href="#III-阅读" class="headerlink" title="III. 阅读"></a>III. 阅读</h4><p>阅读我觉得理清句间和段落关系比较重要，读的时候可以尝试总结3s版本，把握整体结构，最后做题再定位去找细节。可能做多就有感觉了吧，我刷了有机经里的100多篇吧，正确率大概70%左右。做过GRE阅读就会体会到托福阅读多么简单了…<br>5. 阅读机经350题</p>
+<h4 id="IV-数学"><a href="#IV-数学" class="headerlink" title="IV. 数学"></a>IV. 数学</h4><p>基本难度不会超过高中，主要就是细心，然后做做难题。考试时我会做两遍，从头到尾，再做回去，这样能检查一下。<br>6. 维夕数学难题<br>7. 张巍170难题3.0（一定要做）</p>
+<h4 id="V-写作"><a href="#V-写作" class="headerlink" title="V.写作"></a>V.写作</h4><p>理工科的话写作基本到3.5就可以，黑皮书Issue和Argument分的每类下面都挑一篇细读一下，再自己练几篇基本就没什么问题了。<br>8. GRE写作高频题目及考点精析（黑皮书）</p>
+<p>最后祝大家都能杀G成功！</p>
+<p>链接：<a href="https://pan.baidu.com/s/1nln9Aby8cwr8hzv2aCvQpg">https://pan.baidu.com/s/1nln9Aby8cwr8hzv2aCvQpg</a><br>提取码：ixwe</p>
+<p>还有两个一亩三分地上比较好的经验分享：<br><a href="https://www.1point3acres.com/bbs/thread-792086-1-1.html">https://www.1point3acres.com/bbs/thread-792086-1-1.html</a><br><a href="https://www.1point3acres.com/bbs/thread-797603-1-1.html">https://www.1point3acres.com/bbs/thread-797603-1-1.html</a></p>
+]]></content>
+      <categories>
+        <category>Learn</category>
+      </categories>
+      <tags>
+        <tag>English</tag>
+        <tag>GRE</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Old Version Home Page Setup</title>
+    <url>/2021/02/09/Page-Set-Up/</url>
+    <content><![CDATA[<h3 id="安装Ruby"><a href="#安装Ruby" class="headerlink" title="安装Ruby"></a>安装Ruby</h3><p>Windows直接从这里下载<a href="https://rubyinstaller.org/">RubyInstaller</a>,下载后按照提示安装即可。\<br>打开Ruby Prompt输入：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">#install bundle, jekyll</span></span><br><span class="line">gem install bundle jekyll</span><br><span class="line"></span><br><span class="line"><span class="comment">#cd to personal page directory</span></span><br><span class="line">bundle install \\</span><br><span class="line">bundle <span class="built_in">exec</span> jekyll server </span><br><span class="line">(or jekyll serve)</span><br><span class="line"></span><br><span class="line"><span class="comment">#the page generated locally will update as you make changes</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Git-Setup"><a href="#Git-Setup" class="headerlink" title="Git Setup"></a>Git Setup</h3><p>Git cheatsheet: <a href="https://education.github.com/git-cheat-sheet-education.pdf">cheatsheet</a> </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#clone from websit</span></span><br><span class="line">git <span class="built_in">clone</span> XXX.git</span><br><span class="line"></span><br><span class="line"><span class="comment"># generate private &amp; public key</span></span><br><span class="line">ssh -t rsa -C <span class="string">&quot;email@XX.com&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># upload public key to github, test with:</span></span><br><span class="line">ssh git@github.com</span><br><span class="line"></span><br><span class="line"><span class="comment">#set up configs</span></span><br><span class="line">git config --global user.name <span class="string">&quot;name&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;email&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#handle proxy error</span></span><br><span class="line">git config --global --<span class="built_in">unset</span> http.proxy</span><br><span class="line">git config --global --<span class="built_in">unset</span> https.proxy</span><br><span class="line"></span><br><span class="line"><span class="comment">#make changes and submit</span></span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&quot;message&quot;</span></span><br><span class="line">git add remote origin <span class="string">&quot;reop.git&quot;</span></span><br><span class="line">git psuh origin main</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Website</category>
+      </categories>
+      <tags>
+        <tag>Home Page</tag>
+        <tag>Ruby</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Equations of Mathematical Physics Course Page</title>
+    <url>/2021/03/06/mathematical-physics/</url>
+    <content><![CDATA[<p>Click Here: <a href="https://zhaoxing-zstar.github.io/Equations-of-Mathematical-Physics/">Equations of Mathematical Physics</a></p>
+]]></content>
+      <categories>
+        <category>Learn</category>
+      </categories>
+      <tags>
+        <tag>mathematical physics</tag>
+      </tags>
+  </entry>
+</search>
