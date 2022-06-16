@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>CS224n: Natural Language Processing with Deep Learning</title>
-    <url>/2022/06/09/NLP-with-DL/</url>
-    <content><![CDATA[<p>先占个坑，这里更课程笔记~</p>
-]]></content>
-      <categories>
-        <category>Learn</category>
-      </categories>
-      <tags>
-        <tag>NLP</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Change the default working directory of Jupyter Notebook</title>
     <url>/2021/02/04/Jupyter-Change-Dir/</url>
     <content><![CDATA[<p><strong>后来发现好像直接从那个directory下面打开<code>Jupyter Lab</code>就可以…</strong></p>
@@ -77,6 +65,18 @@
       <tags>
         <tag>Home Page</tag>
         <tag>Ruby</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CS224n: Natural Language Processing with Deep Learning</title>
+    <url>/2022/06/09/NLP-with-DL/</url>
+    <content><![CDATA[<p>Click here: <a href="https://zhaoxing-zstar.github.io/CS224n-Natural-Language-Processing-with-Deep-Learning/">https://zhaoxing-zstar.github.io/CS224n-Natural-Language-Processing-with-Deep-Learning/</a></p>
+]]></content>
+      <categories>
+        <category>Learn</category>
+      </categories>
+      <tags>
+        <tag>NLP</tag>
       </tags>
   </entry>
   <entry>
