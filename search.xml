@@ -1,6 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Old Version Home Page Setup</title>
+    <url>/2021/02/09/Page-Set-Up/</url>
+    <content><![CDATA[<h3 id="安装Ruby"><a href="#安装Ruby" class="headerlink" title="安装Ruby"></a>安装Ruby</h3><p>Windows直接从这里下载<a href="https://rubyinstaller.org/">RubyInstaller</a>,下载后按照提示安装即可。\<br>打开Ruby Prompt输入：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">#install bundle, jekyll</span></span><br><span class="line">gem install bundle jekyll</span><br><span class="line"></span><br><span class="line"><span class="comment">#cd to personal page directory</span></span><br><span class="line">bundle install \\</span><br><span class="line">bundle <span class="built_in">exec</span> jekyll server </span><br><span class="line">(or jekyll serve)</span><br><span class="line"></span><br><span class="line"><span class="comment">#the page generated locally will update as you make changes</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Git-Setup"><a href="#Git-Setup" class="headerlink" title="Git Setup"></a>Git Setup</h3><p>Git cheatsheet: <a href="https://education.github.com/git-cheat-sheet-education.pdf">cheatsheet</a> </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#clone from websit</span></span><br><span class="line">git <span class="built_in">clone</span> XXX.git</span><br><span class="line"></span><br><span class="line"><span class="comment"># generate private &amp; public key</span></span><br><span class="line">ssh -t rsa -C <span class="string">&quot;email@XX.com&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># upload public key to github, test with:</span></span><br><span class="line">ssh git@github.com</span><br><span class="line"></span><br><span class="line"><span class="comment">#set up configs</span></span><br><span class="line">git config --global user.name <span class="string">&quot;name&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;email&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#handle proxy error</span></span><br><span class="line">git config --global --<span class="built_in">unset</span> http.proxy</span><br><span class="line">git config --global --<span class="built_in">unset</span> https.proxy</span><br><span class="line"></span><br><span class="line"><span class="comment">#make changes and submit</span></span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&quot;message&quot;</span></span><br><span class="line">git add remote origin <span class="string">&quot;reop.git&quot;</span></span><br><span class="line">git psuh origin main</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Website</category>
+      </categories>
+      <tags>
+        <tag>Home Page</tag>
+        <tag>Ruby</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Change the default working directory of Jupyter Notebook</title>
+    <url>/2021/02/04/Jupyter-Change-Dir/</url>
+    <content><![CDATA[<p><strong>后来发现好像直接从那个directory下面打开<code>Jupyter Lab</code>就可以…</strong></p>
+<h3 id="下载Anaconda3"><a href="#下载Anaconda3" class="headerlink" title="下载Anaconda3"></a>下载Anaconda3</h3><p>首先从官网下载Anaconda3的Individual Edition，下载好后打开Anaconda3 Prompt，输入:<br>jupyter notebook –generate-config:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">jupyter notebook --generate-config</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="打开配置文件"><a href="#打开配置文件" class="headerlink" title="打开配置文件"></a>打开配置文件</h3><p>输入完后，会显示文件产生的路径，按路径找到jupyter_notebook_config.py，用txt或者pycharm打开，<br>按<code>ctrl+F</code>搜索notebook_dir，找到后填入想要设置的路径并保存（注意顺便Uncomment这一行，就是删掉前面的<code>#</code>号,加路径时最好前面加上<code>r</code>转义<br><img src="/images/jupyter/notebook_dir.png" alt="notebook_dir"></p>
+<hr>
+<h3 id="修改JupyterNotebook快捷方式的目标属性"><a href="#修改JupyterNotebook快捷方式的目标属性" class="headerlink" title="修改JupyterNotebook快捷方式的目标属性"></a>修改JupyterNotebook快捷方式的目标属性</h3><p>右击JupyterNotebook快捷方式，选择[属性]，删除[目标]属性中的[%USERPROFILE%]，点击[确定]</p>
+<p><img src="/images/jupyter/change_prop.png" alt="change_prop"></p>
+<p>修改完成，再打开Anaconda Prompt输入jupyter notebook打开工作路径就发生变化了。</p>
+]]></content>
+      <categories>
+        <category>Settings</category>
+      </categories>
+      <tags>
+        <tag>Jupyter</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>GRE Experience</title>
     <url>/2021/10/19/GRE-Experience/</url>
     <content><![CDATA[<p>在飞机上没什么事来写篇GRE的经验吧。。。<br>我总共考过两次GRE</p>
@@ -32,39 +68,15 @@
       </tags>
   </entry>
   <entry>
-    <title>Change the default working directory of Jupyter Notebook</title>
-    <url>/2021/02/04/Jupyter-Change-Dir/</url>
-    <content><![CDATA[<p><strong>后来发现好像直接从那个directory下面打开<code>Jupyter Lab</code>就可以…</strong></p>
-<h3 id="下载Anaconda3"><a href="#下载Anaconda3" class="headerlink" title="下载Anaconda3"></a>下载Anaconda3</h3><p>首先从官网下载Anaconda3的Individual Edition，下载好后打开Anaconda3 Prompt，输入:<br>jupyter notebook –generate-config:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">jupyter notebook --generate-config</span><br></pre></td></tr></table></figure>
-<hr>
-<h3 id="打开配置文件"><a href="#打开配置文件" class="headerlink" title="打开配置文件"></a>打开配置文件</h3><p>输入完后，会显示文件产生的路径，按路径找到jupyter_notebook_config.py，用txt或者pycharm打开，<br>按<code>ctrl+F</code>搜索notebook_dir，找到后填入想要设置的路径并保存（注意顺便Uncomment这一行，就是删掉前面的<code>#</code>号,加路径时最好前面加上<code>r</code>转义<br><img src="/images/jupyter/notebook_dir.png" alt="notebook_dir"></p>
-<hr>
-<h3 id="修改JupyterNotebook快捷方式的目标属性"><a href="#修改JupyterNotebook快捷方式的目标属性" class="headerlink" title="修改JupyterNotebook快捷方式的目标属性"></a>修改JupyterNotebook快捷方式的目标属性</h3><p>右击JupyterNotebook快捷方式，选择[属性]，删除[目标]属性中的[%USERPROFILE%]，点击[确定]</p>
-<p><img src="/images/jupyter/change_prop.png" alt="change_prop"></p>
-<p>修改完成，再打开Anaconda Prompt输入jupyter notebook打开工作路径就发生变化了。</p>
+    <title>Equations of Mathematical Physics Course Page</title>
+    <url>/2021/03/06/mathematical-physics/</url>
+    <content><![CDATA[<p>Click Here: <a href="https://zhaoxing-zstar.github.io/Equations-of-Mathematical-Physics/">Equations of Mathematical Physics</a></p>
 ]]></content>
       <categories>
-        <category>Settings</category>
+        <category>Learn</category>
       </categories>
       <tags>
-        <tag>Jupyter</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Old Version Home Page Setup</title>
-    <url>/2021/02/09/Page-Set-Up/</url>
-    <content><![CDATA[<h3 id="安装Ruby"><a href="#安装Ruby" class="headerlink" title="安装Ruby"></a>安装Ruby</h3><p>Windows直接从这里下载<a href="https://rubyinstaller.org/">RubyInstaller</a>,下载后按照提示安装即可。\<br>打开Ruby Prompt输入：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">#install bundle, jekyll</span></span><br><span class="line">gem install bundle jekyll</span><br><span class="line"></span><br><span class="line"><span class="comment">#cd to personal page directory</span></span><br><span class="line">bundle install \\</span><br><span class="line">bundle <span class="built_in">exec</span> jekyll server </span><br><span class="line">(or jekyll serve)</span><br><span class="line"></span><br><span class="line"><span class="comment">#the page generated locally will update as you make changes</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="Git-Setup"><a href="#Git-Setup" class="headerlink" title="Git Setup"></a>Git Setup</h3><p>Git cheatsheet: <a href="https://education.github.com/git-cheat-sheet-education.pdf">cheatsheet</a> </p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#clone from websit</span></span><br><span class="line">git <span class="built_in">clone</span> XXX.git</span><br><span class="line"></span><br><span class="line"><span class="comment"># generate private &amp; public key</span></span><br><span class="line">ssh -t rsa -C <span class="string">&quot;email@XX.com&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># upload public key to github, test with:</span></span><br><span class="line">ssh git@github.com</span><br><span class="line"></span><br><span class="line"><span class="comment">#set up configs</span></span><br><span class="line">git config --global user.name <span class="string">&quot;name&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;email&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#handle proxy error</span></span><br><span class="line">git config --global --<span class="built_in">unset</span> http.proxy</span><br><span class="line">git config --global --<span class="built_in">unset</span> https.proxy</span><br><span class="line"></span><br><span class="line"><span class="comment">#make changes and submit</span></span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&quot;message&quot;</span></span><br><span class="line">git add remote origin <span class="string">&quot;reop.git&quot;</span></span><br><span class="line">git psuh origin main</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Website</category>
-      </categories>
-      <tags>
-        <tag>Home Page</tag>
-        <tag>Ruby</tag>
+        <tag>mathematical physics</tag>
       </tags>
   </entry>
   <entry>
@@ -77,18 +89,6 @@
       </categories>
       <tags>
         <tag>NLP</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Equations of Mathematical Physics Course Page</title>
-    <url>/2021/03/06/mathematical-physics/</url>
-    <content><![CDATA[<p>Click Here: <a href="https://zhaoxing-zstar.github.io/Equations-of-Mathematical-Physics/">Equations of Mathematical Physics</a></p>
-]]></content>
-      <categories>
-        <category>Learn</category>
-      </categories>
-      <tags>
-        <tag>mathematical physics</tag>
       </tags>
   </entry>
 </search>
