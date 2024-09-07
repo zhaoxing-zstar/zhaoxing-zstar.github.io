@@ -15,7 +15,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>GRE Experience |  Zstar Pages</title>
+      <title>Volatility Forecasting |  Zstar Pages</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -57,7 +57,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-GRE-Experience"
+  id="post-Volatility_Forecasting"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -68,7 +68,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  GRE Experience
+  Volatility Forecasting
 </h1>
  
 
@@ -76,8 +76,8 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2021/10/19/GRE-Experience/" class="article-date">
-  <time datetime="2021-10-18T16:00:00.000Z" itemprop="datePublished">2021-10-19</time>
+      <a href="/2023/12/15/Volatility_Forecasting/" class="article-date">
+  <time datetime="2023-12-16T00:00:00.000Z" itemprop="datePublished">2023-12-16</time>
 </a> 
   <div class="article-category">
     <a class="article-category-link" href="/categories/Learn/">Learn</a>
@@ -88,7 +88,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">661</span>
+            <span class="post-count">2.4k</span>
         </span>
     </span>
 
@@ -97,7 +97,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">2 min</span>
+            <span class="post-count">9 min</span>
         </span>
     </span>
 </div>
@@ -112,25 +112,50 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <p>在飞机上没什么事来写篇GRE的经验吧。。。<br>我总共考过两次GRE</p>
-<ul>
-<li>第一次：153+168+3.5</li>
-<li>第二次：159+169+4.0</li>
-</ul>
-<p>GRE考试分为写作、Verbal、Quantitative三大部分。Verbal和Quantitative都是20个题，Verbal部分包括10个填空和10个阅读，时间为30min，Quantitative是20个数学题，考试时间35min，写作要写Issue和Argument两篇。<br>考试时顺序是：两篇写作+VQVQV  或 QVQVQ ， 据说写完写作那个1min等完是可以进入Q的加试，但我试了试好像并没有成功。虽然数学没有满分比较遗憾，我就主要说说用了哪些资料以及一些技巧吧，我提到的资料会放在最后的网盘里。</p>
-<h4 id="I-单词"><a href="#I-单词" class="headerlink" title="I. 单词"></a>I. 单词</h4><p>单词绝对是GRE考试的重中之重，建议反复背3000词到差不多能认识80%。我背过的词有：</p>
+  <h1 id="Volatility-Forecasting-with-Machine-Learning-and-Intraday-Commonality"><a href="#Volatility-Forecasting-with-Machine-Learning-and-Intraday-Commonality" class="headerlink" title="Volatility Forecasting with Machine Learning and Intraday Commonality"></a>Volatility Forecasting with Machine Learning and Intraday Commonality</h1><h1 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h1><p>本文主要基于机器学习模型探索股票的commnality对预测realized volatility(RV)的影响，结论表明neural networks表现超过linear &amp; tree-based models，该结论在直接用未出现在训练集里的股票测试时同样成立，这说明了股票之间共同的volatility mechanism。文中最后利用过去的日内波动率来预测未来一天的波动率，预测效果能够超过传统只用daily RVs的方式，并观察到了time-of-day效应对预测的影响。</p>
+<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>HFT往往需要robust并且准确地预测日内波动率，Engle and Sokalska指出intraday volatility的预测对风险管理，衍生品定价，量化策略设计都有重要用途。但是学界缺少相关研究，大部分都是从日频收益出发，结果很难推广到日内。</p>
+<p>本文利用美国S&amp;P 500指数中流动性最好的100支股票从2011年7月到2021年6月的高频数据，研究了non-parametric ML models在forecast multi-asset intraday volatility上的表现。首先提出了日内波动率commonality的衡量方式，实验结果说明commnality能够提升预测表现，同时NNs在样本外表现也超出linear &amp; tree-based models。当应用训练集未出现的股票做测试时，同样获得较好的结果，降低了对复杂模型过拟合风险的担忧。最后，日内波动率能为预测未来daily波动率提供额外信息。</p>
+<h1 id="1-Related-Literature"><a href="#1-Related-Literature" class="headerlink" title="1. Related Literature"></a>1. Related Literature</h1><p>这里主要介绍了相关文献，第一部分是研究金融市场commonality，第二部分是预测daily波动率，但是预测日内波动率的关注较少，传统GARCH和SV 模型可能由于参数限制难以有效考虑金融变量间复杂且非线性的关系。第三，ML模型在金融领域潜力巨大，Bucci(2020)的研究表明RNNs在预测S&amp;P指数月度波动率方面能够超过传统计量经济的模型。</p>
+<h1 id="2-Data-and-RV"><a href="#2-Data-and-RV" class="headerlink" title="2. Data and RV"></a>2. Data and RV</h1><p>数据使用从2011-07-01到2021-06-30 S&amp;P index Top 100成分股的高频数据，筛选掉没有横跨整个周期的股票，剩余93支，板块分类如下：<br><img src="/images/vol_forecast/image.png" alt="Alt text1"></p>
+<p>$P_{i,t}$代表金融资产i的价格过程如下，$\mu_i$代表drift, $\sigma_{i,t}$代表顺势波动率，$W_t$是标准布朗运动</p>
+<p>$$<br>dlogP_{i,t} &#x3D; \mu_idt + \sigma_{i,t}dW_t<br>$$</p>
+<p>股票i在(t-b, t]之间的theoretical integrated variance表示为:<br>$$<br>IV_{i,t}(b) &#x3D; \int_{t-b}^{t}\sigma_{i,s}^2 ds<br>$$<br>b代表回看长度，如10min, 30min, 1天。每分钟的中间价对数收益为：</p>
+<p>$$<br>r_{i,t}:&#x3D;log(\frac{P_{i,t}}{P_{i,t-1}})<br>$$</p>
+<p>日内收益的平方和是IV的一致估计量，RV可以被当作IV的proxy，在(t-b, t]之间，RV被定义为：</p>
+<p>$$<br>RV_{i,t}^{(b)} :&#x3D; log[\sum_{s&#x3D;t-b+1}^t r_{i,s}^2]<br>$$</p>
+<p>overnight的信息不再考虑范围内。</p>
+<p>数据处理部分对收益做了0.5%的winsorize。下图可以看到整个样本里在不同回看周期上pairwise correlation的直方图，具体计算方式应该是每两只股票的RV或者return计算一个correlation，然后看整体数值，也就是$C_{93}^2$个数据点的分布，比较有趣的是日内随着b（回看窗口）的拉长，RV相关性实际会先上升，但到1-day又会降低，这说明股票间日内波动率的关联可能比daily波动率更稳定。<br><img src="/images/vol_forecast/image-1.png" alt="Alt text2"></p>
+<p>Figure2可以看到股票之间整体的daily RV的时序变化，两边quantile的弥散度在欧洲主权债务危机，中国股灾，英国脱欧，中美贸易战和COVID-19期间都明显紧缩，Figure 3可以看到30min RV在一天内形成的rever-J-shape.<br><img src="/images/vol_forecast/image-2.png" alt="Alt text3"><br><img src="/images/vol_forecast/image-3.png" alt="Alt text4"></p>
+<h1 id="3-Commonality-Estimation"><a href="#3-Commonality-Estimation" class="headerlink" title="3. Commonality Estimation"></a>3. Commonality Estimation</h1><p>这部分主要讲如何估计股票之间的commonality，主要利用如下回归的adjust $R^2$作为波动率commonality的衡量，其中$\mathrm{RV}_{M, t}^{(b)}$代表t时刻根据单个股票加权计算的市场波动率:</p>
+<p>$$<br>\mathrm{RV}<em>{M, t}^{(b)}&#x3D;\frac{1}{N} \sum</em>{i&#x3D;1}^N \mathrm{RV}<em>{i, t}^{(b)},\qquad \mathrm{RV}</em>{i, t}^{(b)}&#x3D;\alpha_i+\beta_i \mathrm{RV}<em>{M, t}^{(b)}+\epsilon</em>{i, t}<br>$$</p>
+<p>每月进行一次回归并在股票之间取平均，可以从Figure4看到日内的commonality现象是要比daily的更显著且稳定的。Figure5中展示了在交易时段每半个小时的commonality的均值和标准差，与之前波动率的J-curve不同，这里接近收盘commonality会逐渐上升。</p>
+<p><img src="/images/vol_forecast/image-4.png" alt="Alt text5"><br><img src="/images/vol_forecast/image-5.png" alt="Alt text6"></p>
+<h1 id="4-Methodology"><a href="#4-Methodology" class="headerlink" title="4. Methodology"></a>4. Methodology</h1><p>本节尝试利用股票之间的commonality来预测跨资产的波动率，整体模型可以表示为：<br>$$<br>\begin{aligned}<br>\mathrm{RV}<em>{i, t+b}^{(b)} &amp; &#x3D;F_i(\mathbf{u} ; \theta)+\epsilon</em>{i, t+b} \<br>&amp; &#x3D;F_i\left(\mathrm{RV}<em>{i, t}^{(b)}, \ldots, \mathrm{RV}</em>{i, t-(p-1) b}^{(b)}, \mathrm{RV}<em>{M, t}^{(b)}, \ldots, \mathrm{RV}</em>{M, t-(p-1) b}^{(b)} ; \theta\right)+\epsilon_{i, t+b}<br>\end{aligned}<br>$$<br>注意这里$\mathrm{RV}_{i, t+b}^{(b)}$代表的是未来波动率。输入特征包含两部分，首先是individual features，包含单个股票截止t已知的信息，另外是market features，聚合了所有股票包含t时刻已知的信息，$\theta$代表模型参数。模型的细节这里就不赘述了，基本介绍了Seasonal ARIMA, HAR with diurnal effects, OLS, Lasso&#x2F;Ridge, XGBoost, MLP以及LSTM。model训练部分会有三种方式，逐渐向其中加入cross asset和market information:</p>
 <ol>
-<li>GRE3000词（手机app）</li>
-<li>六选二等价词（十分重要！！！）</li>
-<li>数学词汇（做题得知道什么意思啊）<br>大概就这些，再就是做题时候注重积累。</li>
+<li>Single: 只使用股票i的过去RVs作为特征</li>
+<li>Universal: 股票i还是只是本身特征，但是所有股票的数据放在一起训练</li>
+<li>Augmented: 股票i使用individual and market features，同样股票放在一起训练</li>
 </ol>
-<h4 id="II-填空"><a href="#II-填空" class="headerlink" title="II. 填空"></a>II. 填空</h4><p>填空可以说是全靠单词和逻辑了，基本的取正、取反；冒号、分号、逗号；转折：yet, but, however, nevertheless知道，剩下就是刷机经了。还有最好能回顾下错题加深印象，通过刷机经培养做题思维可能更重要，因为我第二次考几乎没遇到原题…<br>4. 填空机经1500题</p>
-<h4 id="III-阅读"><a href="#III-阅读" class="headerlink" title="III. 阅读"></a>III. 阅读</h4><p>阅读我觉得理清句间和段落关系比较重要，读的时候可以尝试总结3s版本，把握整体结构，最后做题再定位去找细节。可能做多就有感觉了吧，我刷了有机经里的100多篇吧，正确率大概70%左右。做过GRE阅读就会体会到托福阅读多么简单了…<br>5. 阅读机经350题</p>
-<h4 id="IV-数学"><a href="#IV-数学" class="headerlink" title="IV. 数学"></a>IV. 数学</h4><p>基本难度不会超过高中，主要就是细心，然后做做难题。考试时我会做两遍，从头到尾，再做回去，这样能检查一下。<br>6. 维夕数学难题<br>7. 张巍170难题3.0（一定要做）</p>
-<h4 id="V-写作"><a href="#V-写作" class="headerlink" title="V.写作"></a>V.写作</h4><p>理工科的话写作基本到3.5就可以，黑皮书Issue和Argument分的每类下面都挑一篇细读一下，再自己练几篇基本就没什么问题了。<br>8. GRE写作高频题目及考点精析（黑皮书）</p>
-<p>最后祝大家都能杀G成功！</p>
-<p>链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1nln9Aby8cwr8hzv2aCvQpg">https://pan.baidu.com/s/1nln9Aby8cwr8hzv2aCvQpg</a><br>提取码：ixwe</p>
-<p>还有两个一亩三分地上比较好的经验分享：<br><a target="_blank" rel="noopener" href="https://www.1point3acres.com/bbs/thread-792086-1-1.html">https://www.1point3acres.com/bbs/thread-792086-1-1.html</a><br><a target="_blank" rel="noopener" href="https://www.1point3acres.com/bbs/thread-797603-1-1.html">https://www.1point3acres.com/bbs/thread-797603-1-1.html</a></p>
+<p>评价指标使用：</p>
+<ul>
+<li><p>Mean - squarederror (MSE): $\frac{1}{N} \sum_{i&#x3D;1}^N \frac{1}{T_{\text {test }}} \sum_{t \in \mathcal{T}<em>{\text {test }}}\left(\mathrm{RV}</em>{i, t}^{(b)}-\widehat{\mathrm{RV}}_{i, t}^{(b)}\right)^2$,</p>
+</li>
+<li><p>Quasi - likelihood (QLIKE): $\frac{1}{N} \sum_{i&#x3D;1}^N \frac{1}{T_{\text {trst }}} \sum_{t \in \mathcal{T}<em>{\text {test }}}\left[\frac{\exp \left(\mathrm{RV}</em>{i, t}^{(b)}\right)}{\exp \left(\widehat{\mathrm{RV}}<em>{i, t}^{(b)}\right)}-\left(\mathrm{RV}</em>{i, t}^{(b)}-\widehat{\mathrm{RV}}_{i, t}^{(b)}\right)-1\right]$</p>
+</li>
+</ul>
+<h1 id="5-Experiments"><a href="#5-Experiments" class="headerlink" title="5. Experiments"></a>5. Experiments</h1><p>数据集会被划分为: training, validation, testing，采用roll forward的方式，一年做validation, 一年testing，前面的日期都作为training。 MLP &amp; NNs会采用ensemble的方式，即在不同的初始化条件下训练多个模型后做平均。</p>
+<p><img src="/images/vol_forecast/image-6.png" alt="Alt text7"></p>
+<p>实验结果如上表所示，可以看到LSTM能够在日内表现最好，并且有着最高的realized utility。但是能看到，在1-day的时候,LASSO表现最好，这可能是因为数据稀缺性导致的(相比日内)。Figure 7中展示了不同trading shcema下QLIKEs的差值，即$\Delta QLIKE$, 该数值越负代表out of sample表现的提升，可以看到Universal相比Single的提升其实并不名贡献，但是加入市场的信息后提高了预测表现。</p>
+<p><img src="/images/vol_forecast/image-7.png" alt="Alt text8"></p>
+<p>另外一个值得思考的问题是Universal或Augmented setting的提升是否与股票的commonality有联系。从Figure8可以看到，样本外的QLIKE是会随着股票commonality的提升而下降的。<br><img src="/images/vol_forecast/image-8.png" alt="Alt text9"></p>
+<p>为了测试拟合模型的generalization能力，可以使用训练集里未出现的股票来测试模型，记录模型使用的股票为raw stocks, 新的测试股票为unseen stocks, Figure 9展示了得到的结果，能够得出结论，在聚合的股票池上训练出的NN模型有更好的预测能力，为股票间的<em>universal volatility mechanism</em>提供了证据。</p>
+<p><img src="/images/vol_forecast/image-9.png" alt="Alt text10"></p>
+<h1 id="6-Forecasting-Daily-RVs-with-Intraday-RVs"><a href="#6-Forecasting-Daily-RVs-with-Intraday-RVs" class="headerlink" title="6. Forecasting Daily RVs with Intraday RVs"></a>6. Forecasting Daily RVs with Intraday RVs</h1><p>从前述实验可以看到预测日内波动率时股票之间commonality的作用，这里对利用日内波动率来预测未来的daily波动率进行研究，介绍了<em>Intraday2Daily</em>的方式，模型为：</p>
+<p>$$<br>\mathrm{RV}<em>{i, t+1}^{(d)}&#x3D;F_i\left(\mathrm{RV}</em>{i, t}^{(b)}, \ldots, \mathrm{RV}<em>{i, t-(p-1) b}^{(b)}, \mathrm{RV}</em>{i, t-1}^{(d)}, \ldots, \mathrm{RV}<em>{i, t-(p-1)}^{(d)} ; \theta\right)+\epsilon</em>{i, t+1}<br>$$<br>这里，前半部分$\left(\mathrm{RV}<em>{i, t}^{(b)}, \ldots, \mathrm{RV}</em>{i, t-(k-1) b}^{(b)}\right)$代表股票i在日内horizon b上的波动率，后半部分$\left(\mathrm{RV}<em>{i, t-1}^{(d)}, \ldots, \mathrm{RV}</em>{i, t-(p-1)}^{(d)}\right)$代表过去daily RVs，但是只截止到t-1天，相当于用t天的日内波动率和t-1之前的daily RVs来预测未来RVs。</p>
+<p><img src="/images/vol_forecast/image-10.png" alt="Alt text11"></p>
+<p><img src="/images/vol_forecast/image-11.png" alt="Alt text12"></p>
+<p>与之前的实验结果相比，这种方式能够提升基准模型的表现，使用了日间信息的MLP模型达到了最好的表现，同时也达到了更高的utilities。最后，这里还研究了time-of-day的现象，使用上述实验最近一天OLS model intraday RV的系数进行比较，可以看到，接近收盘的波动率时最重要的指标，而非白天的波动模式。有数据表明收盘半小时会占据美国市场3000支股票2020年前几个月约23%的交易量，这也使得收盘前的波动率成为预测下一日波动率的重要信息。<br><img src="/images/vol_forecast/image-12.png" alt="Alt text13"></p>
+<p>这篇文章对股票的commonality进行了详细研究，并且比较了不同模型和setting下的表现， NN因为能够捕捉predictors之间的复杂关系而有着更好的表现，同时训练出的模型也展示出了一定的泛化能力，即在未见过的股票上进行预测。最后，利用日内波动率预测daily RVs有一定效果，同时也能观察到收盘前波动率的重要性。受限于篇幅，很多细节没有展开，大家感兴趣可以参考原文。</p>
  
       <!-- reward -->
       
@@ -195,12 +220,12 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2021/10/19/GRE-Experience/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2023/12/15/Volatility_Forecasting/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/English/" rel="tag">English</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GRE/" rel="tag">GRE</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/quantitative-finance/" rel="tag">quantitative finance</a></li></ul>
 
     </footer>
   </div>
@@ -208,26 +233,18 @@
    
   <nav class="article-nav">
     
-      <a href="/2022/06/09/NLP-with-DL/" class="article-nav-link">
-        <strong class="article-nav-caption">Previous Post</strong>
-        <div class="article-nav-title">
-          
-            CS224n: Natural Language Processing with Deep Learning
-          
-        </div>
-      </a>
     
-    
-      <a href="/2021/03/06/mathematical-physics/" class="article-nav-link">
+      <a href="/2023/07/14/Deep_attentive/" class="article-nav-link">
         <strong class="article-nav-caption">Next Post</strong>
-        <div class="article-nav-title">Equations of Mathematical Physics Course Page</div>
+        <div class="article-nav-title">Deep Attentive Survival Analysis</div>
       </a>
     
   </nav>
 
   
    
-     
+  
+    
 </article>
 
 </section>
@@ -236,7 +253,7 @@
     <ul>
       <li>
         Copyrights &copy;
-        2022-2023
+        2022-2024
         <i class="ri-heart-fill heart_icon"></i> Zstar
       </li>
     </ul>

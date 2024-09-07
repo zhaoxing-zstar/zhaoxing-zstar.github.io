@@ -15,7 +15,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>Change the default working directory of Jupyter Notebook |  Zstar Pages</title>
+      <title>Old Version Home Page Setup |  Zstar Pages</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -57,7 +57,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-Jupyter-Change-Dir"
+  id="post-Page-Set-Up"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -68,7 +68,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  Change the default working directory of Jupyter Notebook
+  Old Version Home Page Setup
 </h1>
  
 
@@ -76,11 +76,11 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2021/02/04/Jupyter-Change-Dir/" class="article-date">
-  <time datetime="2021-02-03T16:00:00.000Z" itemprop="datePublished">2021-02-04</time>
+      <a href="/2021/02/08/Page-Set-Up/" class="article-date">
+  <time datetime="2021-02-09T00:00:00.000Z" itemprop="datePublished">2021-02-09</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Settings/">Settings</a>
+    <a class="article-category-link" href="/categories/Website/">Website</a>
   </div>
   
 <div class="word_count">
@@ -88,7 +88,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">191</span>
+            <span class="post-count">204</span>
         </span>
     </span>
 
@@ -112,16 +112,14 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <p><strong>后来发现好像直接从那个directory下面打开<code>Jupyter Lab</code>就可以…</strong></p>
-<h3 id="下载Anaconda3"><a href="#下载Anaconda3" class="headerlink" title="下载Anaconda3"></a>下载Anaconda3</h3><p>首先从官网下载Anaconda3的Individual Edition，下载好后打开Anaconda3 Prompt，输入:<br>jupyter notebook –generate-config:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jupyter notebook --generate-config</span><br></pre></td></tr></table></figure>
-<hr>
-<h3 id="打开配置文件"><a href="#打开配置文件" class="headerlink" title="打开配置文件"></a>打开配置文件</h3><p>输入完后，会显示文件产生的路径，按路径找到jupyter_notebook_config.py，用txt或者pycharm打开，<br>按<code>ctrl+F</code>搜索notebook_dir，找到后填入想要设置的路径并保存（注意顺便Uncomment这一行，就是删掉前面的<code>#</code>号,加路径时最好前面加上<code>r</code>转义<br><img src="/images/jupyter/notebook_dir.png" alt="notebook_dir"></p>
-<hr>
-<h3 id="修改JupyterNotebook快捷方式的目标属性"><a href="#修改JupyterNotebook快捷方式的目标属性" class="headerlink" title="修改JupyterNotebook快捷方式的目标属性"></a>修改JupyterNotebook快捷方式的目标属性</h3><p>右击JupyterNotebook快捷方式，选择[属性]，删除[目标]属性中的[%USERPROFILE%]，点击[确定]</p>
-<p><img src="/images/jupyter/change_prop.png" alt="change_prop"></p>
-<p>修改完成，再打开Anaconda Prompt输入jupyter notebook打开工作路径就发生变化了。</p>
- 
+  <h3 id="安装Ruby"><a href="#安装Ruby" class="headerlink" title="安装Ruby"></a>安装Ruby</h3><p>Windows直接从这里下载<a target="_blank" rel="noopener" href="https://rubyinstaller.org/">RubyInstaller</a>,下载后按照提示安装即可。\<br>打开Ruby Prompt输入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">#install bundle, jekyll</span></span><br><span class="line">gem install bundle jekyll</span><br><span class="line"></span><br><span class="line"><span class="comment">#cd to personal page directory</span></span><br><span class="line">bundle init \\</span><br><span class="line">bundle install \\</span><br><span class="line">bundle <span class="built_in">exec</span> jekyll server </span><br><span class="line">(or jekyll serve)</span><br><span class="line"></span><br><span class="line"><span class="comment">#the page generated locally will update as you make changes</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="NPM-amp-Hexo-Setup"><a href="#NPM-amp-Hexo-Setup" class="headerlink" title="NPM &amp; Hexo Setup"></a>NPM &amp; Hexo Setup</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update \\</span><br><span class="line">sudo apt install nodejs \\</span><br><span class="line">sudo apt install npm \\</span><br><span class="line">node -v \\</span><br><span class="line">npm -v \\</span><br><span class="line">npm install -g hexo-cli \\</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;PATH=&quot;$PATH:./node_modules/.bin&quot;&#x27;</span> &gt;&gt; ~/.profile</span><br></pre></td></tr></table></figure>
+
+<p>Ref: <a target="_blank" rel="noopener" href="https://shen-yu.github.io/2019/ayer/">Ayer中文说明</a>. All modifications for this website should be done in <code>themes</code> folder, instead of <code>public</code> folder</p>
+<h3 id="Git-Setup"><a href="#Git-Setup" class="headerlink" title="Git Setup"></a>Git Setup</h3><p>Git cheatsheet: <a target="_blank" rel="noopener" href="https://education.github.com/git-cheat-sheet-education.pdf">cheatsheet</a> </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#clone from websit</span></span><br><span class="line">git <span class="built_in">clone</span> XXX.git</span><br><span class="line"></span><br><span class="line"><span class="comment"># generate private &amp; public key</span></span><br><span class="line">ssh -t rsa -C <span class="string">&quot;email@XX.com&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># upload public key to github, test with:</span></span><br><span class="line">ssh git@github.com</span><br><span class="line"></span><br><span class="line"><span class="comment">#set up configs</span></span><br><span class="line">git config --global user.name <span class="string">&quot;name&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;email&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#handle proxy error</span></span><br><span class="line">git config --global --<span class="built_in">unset</span> http.proxy</span><br><span class="line">git config --global --<span class="built_in">unset</span> https.proxy</span><br><span class="line"></span><br><span class="line"><span class="comment">#make changes and submit</span></span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&quot;message&quot;</span></span><br><span class="line">git add remote origin <span class="string">&quot;reop.git&quot;</span></span><br><span class="line">git psuh origin main</span><br></pre></td></tr></table></figure> 
       <!-- reward -->
       
     </div>
@@ -185,12 +183,12 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2021/02/04/Jupyter-Change-Dir/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2021/02/08/Page-Set-Up/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Jupyter/" rel="tag">Jupyter</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Home-Page/" rel="tag">Home Page</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ruby/" rel="tag">Ruby</a></li></ul>
 
     </footer>
   </div>
@@ -198,21 +196,27 @@
    
   <nav class="article-nav">
     
-      <a href="/2021/02/09/Page-Set-Up/" class="article-nav-link">
+      <a href="/2021/03/05/mathematical-physics/" class="article-nav-link">
         <strong class="article-nav-caption">Previous Post</strong>
         <div class="article-nav-title">
           
-            Old Version Home Page Setup
+            Equations of Mathematical Physics Course Page
           
         </div>
       </a>
     
     
+      <a href="/2021/02/03/Jupyter-Change-Dir/" class="article-nav-link">
+        <strong class="article-nav-caption">Next Post</strong>
+        <div class="article-nav-title">Change the default working directory of Jupyter Notebook</div>
+      </a>
+    
   </nav>
 
   
    
-     
+  
+    
 </article>
 
 </section>
@@ -221,7 +225,7 @@
     <ul>
       <li>
         Copyrights &copy;
-        2022-2023
+        2022-2024
         <i class="ri-heart-fill heart_icon"></i> Zstar
       </li>
     </ul>

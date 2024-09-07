@@ -1,44 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Old Version Home Page Setup</title>
-    <url>/2021/02/09/Page-Set-Up/</url>
-    <content><![CDATA[<h3 id="安装Ruby"><a href="#安装Ruby" class="headerlink" title="安装Ruby"></a>安装Ruby</h3><p>Windows直接从这里下载<a href="https://rubyinstaller.org/">RubyInstaller</a>,下载后按照提示安装即可。\<br>打开Ruby Prompt输入：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">#install bundle, jekyll</span></span><br><span class="line">gem install bundle jekyll</span><br><span class="line"></span><br><span class="line"><span class="comment">#cd to personal page directory</span></span><br><span class="line">bundle install \\</span><br><span class="line">bundle <span class="built_in">exec</span> jekyll server </span><br><span class="line">(or jekyll serve)</span><br><span class="line"></span><br><span class="line"><span class="comment">#the page generated locally will update as you make changes</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="Git-Setup"><a href="#Git-Setup" class="headerlink" title="Git Setup"></a>Git Setup</h3><p>Git cheatsheet: <a href="https://education.github.com/git-cheat-sheet-education.pdf">cheatsheet</a> </p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#clone from websit</span></span><br><span class="line">git <span class="built_in">clone</span> XXX.git</span><br><span class="line"></span><br><span class="line"><span class="comment"># generate private &amp; public key</span></span><br><span class="line">ssh -t rsa -C <span class="string">&quot;email@XX.com&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># upload public key to github, test with:</span></span><br><span class="line">ssh git@github.com</span><br><span class="line"></span><br><span class="line"><span class="comment">#set up configs</span></span><br><span class="line">git config --global user.name <span class="string">&quot;name&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;email&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#handle proxy error</span></span><br><span class="line">git config --global --<span class="built_in">unset</span> http.proxy</span><br><span class="line">git config --global --<span class="built_in">unset</span> https.proxy</span><br><span class="line"></span><br><span class="line"><span class="comment">#make changes and submit</span></span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&quot;message&quot;</span></span><br><span class="line">git add remote origin <span class="string">&quot;reop.git&quot;</span></span><br><span class="line">git psuh origin main</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Website</category>
-      </categories>
-      <tags>
-        <tag>Home Page</tag>
-        <tag>Ruby</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Change the default working directory of Jupyter Notebook</title>
-    <url>/2021/02/04/Jupyter-Change-Dir/</url>
-    <content><![CDATA[<p><strong>后来发现好像直接从那个directory下面打开<code>Jupyter Lab</code>就可以…</strong></p>
-<h3 id="下载Anaconda3"><a href="#下载Anaconda3" class="headerlink" title="下载Anaconda3"></a>下载Anaconda3</h3><p>首先从官网下载Anaconda3的Individual Edition，下载好后打开Anaconda3 Prompt，输入:<br>jupyter notebook –generate-config:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">jupyter notebook --generate-config</span><br></pre></td></tr></table></figure>
-<hr>
-<h3 id="打开配置文件"><a href="#打开配置文件" class="headerlink" title="打开配置文件"></a>打开配置文件</h3><p>输入完后，会显示文件产生的路径，按路径找到jupyter_notebook_config.py，用txt或者pycharm打开，<br>按<code>ctrl+F</code>搜索notebook_dir，找到后填入想要设置的路径并保存（注意顺便Uncomment这一行，就是删掉前面的<code>#</code>号,加路径时最好前面加上<code>r</code>转义<br><img src="/images/jupyter/notebook_dir.png" alt="notebook_dir"></p>
-<hr>
-<h3 id="修改JupyterNotebook快捷方式的目标属性"><a href="#修改JupyterNotebook快捷方式的目标属性" class="headerlink" title="修改JupyterNotebook快捷方式的目标属性"></a>修改JupyterNotebook快捷方式的目标属性</h3><p>右击JupyterNotebook快捷方式，选择[属性]，删除[目标]属性中的[%USERPROFILE%]，点击[确定]</p>
-<p><img src="/images/jupyter/change_prop.png" alt="change_prop"></p>
-<p>修改完成，再打开Anaconda Prompt输入jupyter notebook打开工作路径就发生变化了。</p>
-]]></content>
-      <categories>
-        <category>Settings</category>
-      </categories>
-      <tags>
-        <tag>Jupyter</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>GRE Experience</title>
-    <url>/2021/10/19/GRE-Experience/</url>
+    <url>/2021/10/18/GRE-Experience/</url>
     <content><![CDATA[<p>在飞机上没什么事来写篇GRE的经验吧。。。<br>我总共考过两次GRE</p>
 <ul>
 <li>第一次：153+168+3.5</li>
@@ -68,8 +32,59 @@
       </tags>
   </entry>
   <entry>
+    <title>Change the default working directory of Jupyter Notebook</title>
+    <url>/2021/02/03/Jupyter-Change-Dir/</url>
+    <content><![CDATA[<p><strong>后来发现好像直接从那个directory下面打开<code>Jupyter Lab</code>就可以…</strong></p>
+<h3 id="下载Anaconda3"><a href="#下载Anaconda3" class="headerlink" title="下载Anaconda3"></a>下载Anaconda3</h3><p>首先从官网下载Anaconda3的Individual Edition，下载好后打开Anaconda3 Prompt，输入:<br>jupyter notebook –generate-config:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">jupyter notebook --generate-config</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="打开配置文件"><a href="#打开配置文件" class="headerlink" title="打开配置文件"></a>打开配置文件</h3><p>输入完后，会显示文件产生的路径，按路径找到jupyter_notebook_config.py，用txt或者pycharm打开，<br>按<code>ctrl+F</code>搜索notebook_dir，找到后填入想要设置的路径并保存（注意顺便Uncomment这一行，就是删掉前面的<code>#</code>号,加路径时最好前面加上<code>r</code>转义<br><img src="/images/jupyter/notebook_dir.png" alt="notebook_dir"></p>
+<hr>
+<h3 id="修改JupyterNotebook快捷方式的目标属性"><a href="#修改JupyterNotebook快捷方式的目标属性" class="headerlink" title="修改JupyterNotebook快捷方式的目标属性"></a>修改JupyterNotebook快捷方式的目标属性</h3><p>右击JupyterNotebook快捷方式，选择[属性]，删除[目标]属性中的[%USERPROFILE%]，点击[确定]</p>
+<p><img src="/images/jupyter/change_prop.png" alt="change_prop"></p>
+<p>修改完成，再打开Anaconda Prompt输入jupyter notebook打开工作路径就发生变化了。</p>
+]]></content>
+      <categories>
+        <category>Settings</category>
+      </categories>
+      <tags>
+        <tag>Jupyter</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Old Version Home Page Setup</title>
+    <url>/2021/02/08/Page-Set-Up/</url>
+    <content><![CDATA[<h3 id="安装Ruby"><a href="#安装Ruby" class="headerlink" title="安装Ruby"></a>安装Ruby</h3><p>Windows直接从这里下载<a href="https://rubyinstaller.org/">RubyInstaller</a>,下载后按照提示安装即可。\<br>打开Ruby Prompt输入：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">#install bundle, jekyll</span></span><br><span class="line">gem install bundle jekyll</span><br><span class="line"></span><br><span class="line"><span class="comment">#cd to personal page directory</span></span><br><span class="line">bundle init \\</span><br><span class="line">bundle install \\</span><br><span class="line">bundle <span class="built_in">exec</span> jekyll server </span><br><span class="line">(or jekyll serve)</span><br><span class="line"></span><br><span class="line"><span class="comment">#the page generated locally will update as you make changes</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="NPM-amp-Hexo-Setup"><a href="#NPM-amp-Hexo-Setup" class="headerlink" title="NPM &amp; Hexo Setup"></a>NPM &amp; Hexo Setup</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt update \\</span><br><span class="line">sudo apt install nodejs \\</span><br><span class="line">sudo apt install npm \\</span><br><span class="line">node -v \\</span><br><span class="line">npm -v \\</span><br><span class="line">npm install -g hexo-cli \\</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;PATH=&quot;$PATH:./node_modules/.bin&quot;&#x27;</span> &gt;&gt; ~/.profile</span><br></pre></td></tr></table></figure>
+
+<p>Ref: <a href="https://shen-yu.github.io/2019/ayer/">Ayer中文说明</a>. All modifications for this website should be done in <code>themes</code> folder, instead of <code>public</code> folder</p>
+<h3 id="Git-Setup"><a href="#Git-Setup" class="headerlink" title="Git Setup"></a>Git Setup</h3><p>Git cheatsheet: <a href="https://education.github.com/git-cheat-sheet-education.pdf">cheatsheet</a> </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#clone from websit</span></span><br><span class="line">git <span class="built_in">clone</span> XXX.git</span><br><span class="line"></span><br><span class="line"><span class="comment"># generate private &amp; public key</span></span><br><span class="line">ssh -t rsa -C <span class="string">&quot;email@XX.com&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># upload public key to github, test with:</span></span><br><span class="line">ssh git@github.com</span><br><span class="line"></span><br><span class="line"><span class="comment">#set up configs</span></span><br><span class="line">git config --global user.name <span class="string">&quot;name&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;email&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#handle proxy error</span></span><br><span class="line">git config --global --<span class="built_in">unset</span> http.proxy</span><br><span class="line">git config --global --<span class="built_in">unset</span> https.proxy</span><br><span class="line"></span><br><span class="line"><span class="comment">#make changes and submit</span></span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&quot;message&quot;</span></span><br><span class="line">git add remote origin <span class="string">&quot;reop.git&quot;</span></span><br><span class="line">git psuh origin main</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Website</category>
+      </categories>
+      <tags>
+        <tag>Home Page</tag>
+        <tag>Ruby</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CS224n: Natural Language Processing with Deep Learning</title>
+    <url>/2022/06/09/NLP-with-DL/</url>
+    <content><![CDATA[<p>Click here hhhhh: <a href="https://zhaoxing-zstar.github.io/CS224n-Natural-Language-Processing-with-Deep-Learning/">https://zhaoxing-zstar.github.io/CS224n-Natural-Language-Processing-with-Deep-Learning/</a></p>
+]]></content>
+      <categories>
+        <category>Learn</category>
+      </categories>
+      <tags>
+        <tag>NLP</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Equations of Mathematical Physics Course Page</title>
-    <url>/2021/03/06/mathematical-physics/</url>
+    <url>/2021/03/05/mathematical-physics/</url>
     <content><![CDATA[<p>Click Here: <a href="https://zhaoxing-zstar.github.io/Equations-of-Mathematical-Physics/">Equations of Mathematical Physics</a></p>
 ]]></content>
       <categories>
@@ -80,20 +95,8 @@
       </tags>
   </entry>
   <entry>
-    <title>CS224n: Natural Language Processing with Deep Learning</title>
-    <url>/2022/06/09/NLP-with-DL/</url>
-    <content><![CDATA[<p>Click here: <a href="https://zhaoxing-zstar.github.io/CS224n-Natural-Language-Processing-with-Deep-Learning/">https://zhaoxing-zstar.github.io/CS224n-Natural-Language-Processing-with-Deep-Learning/</a></p>
-]]></content>
-      <categories>
-        <category>Learn</category>
-      </categories>
-      <tags>
-        <tag>NLP</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>HFT_return</title>
-    <url>/2023/07/03/HFT-return/</url>
+    <url>/2023/07/02/HFT-return/</url>
     <content><![CDATA[<h1 id="How-and-When-are-High-Frequency-Stock-Returns-Predictable"><a href="#How-and-When-are-High-Frequency-Stock-Returns-Predictable" class="headerlink" title="How and When are High-Frequency Stock Returns Predictable?"></a>How and When are High-Frequency Stock Returns Predictable?</h1><ul>
 <li>NBER Working Paper.</li>
 </ul>
@@ -195,6 +198,120 @@
 <li>comparison of different models, the results?</li>
 <li>stock demean?</li>
 </ol>
+]]></content>
+      <categories>
+        <category>Learn</category>
+      </categories>
+      <tags>
+        <tag>quantitative finance</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Deep Attentive Survival Analysis</title>
+    <url>/2023/07/14/Deep_attentive/</url>
+    <content><![CDATA[<h1 id="Deep-Attentive-Survival-Analysis-in-Limit-Order-Books-Estimating-Fill-Probabilities-with-Convolutional-Transformers"><a href="#Deep-Attentive-Survival-Analysis-in-Limit-Order-Books-Estimating-Fill-Probabilities-with-Convolutional-Transformers" class="headerlink" title="Deep Attentive Survival Analysis in Limit Order Books: Estimating Fill Probabilities with Convolutional-Transformers"></a>Deep Attentive Survival Analysis in Limit Order Books: Estimating Fill Probabilities with Convolutional-Transformers</h1><h1 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h1><p>策略执行过程中一个重要的选择是在LOB上下passive(liquidity providing)还是aggressive(liquidity tkaing)的订单。回答这个问题需要知道在LOB上挂passive单的成交概率。本文提出了一种基于深度学习的方法来估计挂在LOB上不同挡位订单的成交概率。主要采用一种生存分析的方法俩将time varying的LOB特征映射到订单成交时间的分布上。方法主要使用convolutional-transformer的encode以及单调的神经网络decoder组成。作者使用<em>proper scoring rules</em>来将该方法与其他方法对比，并且探索了用来估计成交概率特征中蕴含的可解释性。最终，作者统计分析了挂在有着不同queue dynamics和trading activity的order book中不同位置订单的成交概率。</p>
+<h1 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1. Introduction"></a>1. Introduction</h1><p>LOBs有不同的订单类型，其中limit orders和market orders最为常见。market orders会过spread在对手盘立刻成交，而limit orders会被放在订单簿不同挡位，如果成交的话会获得比market order更好的价格。limit order成交所需的时间被称为<strong>time-to-fill</strong>, 可以用不同方式估计。本文中，作者使用生存分析的方法来计算在LOB不同深度下limit orders的成交概率。</p>
+<p>论文提出了从纵向数据中估计survival function的深度学习方法，具体利用一个基于transformer和部分单调的神经网络架构的encode-decoder结构。模型首先通过自注意力机制来总结在未下单前过去lookback window中最近的事件，然后利用这种潜在表示来估计订单提交后的成交概率。所使用的自注意力和卷积层提供了很有价值的时序信息，该信息可以提升基于最近trades对survival function的估计。为评估survival function的表现，作者采用<em>proper scoring function</em>来确保拟合正确。</p>
+<p>论文主要使用Nasdaq交易所的数据。利用模型来预测挂在LOB不同档位订单的survival functions, 成交遵循price-time priority. 研究得到的结果在具有不同特征的资产上具有一致性。另外，作者通过shapley values发现模型主要依赖于高频信息，slow moving features提供的seasonal日内模式贡献较少。</p>
+<h1 id="2-Literature-Review"><a href="#2-Literature-Review" class="headerlink" title="2. Literature Review"></a>2. Literature Review</h1><p>这部分就不展开啦，感兴趣的话可以到原文阅读</p>
+<h1 id="3-Limit-Order-Books"><a href="#3-Limit-Order-Books" class="headerlink" title="3. Limit Order Books"></a>3. Limit Order Books</h1><p>挂单一直存在于LOB上知道被撮合成交或是扯淡。在文中，当提到market orders是，假设这些订单式要么是*fill-or-kill(FoK)<em>的订单，要么等待直到成交，要么被取消，或者是</em>immediate-or-cancel(IoC)<em>的市价单，要么被立刻成交(entirely or partially)在预先确定的价格范围内。另外，所有的订单都是</em>good for day(DAY)*的订单，当天收盘失效或是被撤单。</p>
+<p>大部分交易所的撮合机制都遵循price-time priority，订单首先被按照价格排序，然后同一价位按照到达先后顺序。LOB有buy and ask双方，一个t时刻LOB的切片可以为被向量表示为：</p>
+<p>$$<br>s_t&#x3D;\left{p_a^l(t), v_a^l(t), p_b^l(t), v_b^l(t)\right}_{l&#x3D;1}^L<br>$$<br>代表在时刻t ask和bid在不通过档位$l \in {1,…,L}$的量价。矩阵$\bm{x_t}\in \mathbb{R}^{T\times 4L}$代表LOB在时序t到t-T之间的变化。使用的message data的示例:<br><img src="/images/deep_attentive/image.png" alt="Example of message data"></p>
+<h1 id="4-Survival-Analysis"><a href="#4-Survival-Analysis" class="headerlink" title="4. Survival Analysis"></a>4. Survival Analysis</h1><p><em>event time</em> $T_l\in\mathbb{R}<em>{\geq 0}$是一个随机变量，用来描述挂在不同档位$l$订单的成交时间。本文的目标是基于市场特征$\bm{x} \in \mathbb{R}^p$来预测$T_l$。所有的事件都是right-censoring的，即可能无法得到成交时间。当一个limit order被撤销，或是到达闭盘，就被考虑为一个censored event. 考虑N个形如$(\bm{x_i}, z_i, \delta_i)$的observations, $\delta_i$是一个indicator functions, 为0代表事件被censor， 其他情况为1. $z_i$和$\bm{x_i}$代表观测到的event time和截止挂单前最新的market features。 利用这个triplet可以估计survival function $S</em>{T_l}(t \mid \mathbf{x})&#x3D;\mathbb{P}\left{T_l&gt;t \mid \mathbf{x}\right}$</p>
+<p><img src="/images/deep_attentive/image-1.png" alt="events after submission of a limit order"></p>
+<p>survival function代表了挂在档位$l$订单在t时刻之前未被fill的概率。survival function 和对应的cumulative density function（CDF）之间的关系可以表示为:<br>$S_{T_l}(t \mid \mathbf{x})&#x3D;1 - F_{T_l}(t \mid \mathbf{x})$， 因此pdf: $f_{T_l}(t \mid \mathbf{x})&#x3D;- \frac{d}{dt} S_{T_l}(t \mid \mathbf{x})$描述了挂单之后在一定时间内成交的概率. 另外，<em>hazerd rate</em>表示订单在时间t后被成交的倾向性：<br>$$<br>h_{T_l}(t \mid \mathbf{x}) &#x3D; \frac{f_{T_l}(t \mid \mathbf{x}) }{ 1- F_{T_l}(t \mid \mathbf{x})}<br>$$<br>$S_{T_l}, F_{T_l}, h_{T_l}$之间有如下关系：<br>$$<br>S_{T_l}(t \mid \mathbf{x})&#x3D;\mathbb{P}\left{T_l&gt;t \mid \mathbf{x}\right}&#x3D;1-F_{T_l}(t \mid \mathbf{x})&#x3D;\exp \left(-\int_0^t h_{T_l}(s) d s\right)<br>$$</p>
+<p>survival functions的形状有一组参数$\bm{\theta} \in \mathbb{R}$描述。一般可能认为该函数可以由一些分布近似(e.g. Weibull distribution)并估计相关的参数。另一种方式是要通过神经网络来近似survival functions，这样参数更多但能更好拟合数据并且能反映与市场特征之间的非线性关系。利用最大似然估计来最大化<em>right censored log-likelihood function</em>:<br>$$<br>\mathcal{L}(\boldsymbol{\theta})&#x3D;\log \left(L_N(\boldsymbol{\theta})\right)&#x3D;\sum_{k&#x3D;1}^N \delta_k \log \left(\hat{f}\left(z_k \mid \mathbf{x}_k, \boldsymbol{\theta}\right)\right)+\left(1-\delta_k\right) \log \left(\hat{S}\left(z_k \mid \mathbf{x}_k, \boldsymbol{\theta}\right)\right)<br>$$<br>$\hat{S}$和$\hat{f}$分别是neural network对survival function和density function的估计。具体的推导在appendix中。训练时，需要模型在精确的时间步来输出$\hat{S}(z_k | \bm{X_k}, \bm{\theta})$，本文使用的模型通过只对decoder输入时间$z_k$并结合从LOB中提取的latent representation, 从而在足够小的时间步上评估survival function并且遵循survival function的单调性。</p>
+<p>为了评估模型拟合survival function的好坏，作者使用了<em>scoring rule</em>的概念。一个scoring rule$\mathcal{S}$的输入是一个在集合$\mathcal{Y}$上的分布$S$，观测样本$y \in \mathcal{Y}$, 并返回一个score $\mathcal{S}(S, y)$。对positive的scoring rules, 更高的分数代表模型你和更好，在生存回归中，一个scoring rule 是<em>proper</em>如果：<br>$$<br>\mathbb{E}<em>{t, c, \mathbf{x}}[\mathcal{S}(S(t \mid \mathbf{x}),(z, \delta))] \geq \mathbb{E}</em>{t, c, \mathbf{x}}[\mathcal{S}(\hat{S}(t \mid \mathbf{x}),(z, \delta))]<br>$$<br>对所有survival function的估计$\hat{S}(t \mid \mathbf{x})$, 即期望上，一个proper的scoring rule会给真实的survival function更高的分数。right-censored log-likelihood(RCLL)是一个proper scoring rule, 作者使用这个rule来确保你和的模型是正确逼近真实的survival function的。</p>
+<h1 id="5-Empirical-and-Statistical-Evidence-of-Fill-Rate-Executions"><a href="#5-Empirical-and-Statistical-Evidence-of-Fill-Rate-Executions" class="headerlink" title="5. Empirical and Statistical Evidence of Fill Rate Executions"></a>5. Empirical and Statistical Evidence of Fill Rate Executions</h1><p>首先介绍两种得到limit orders的成交时间的方式，第一种是记录挂在LOB上的limit order的结果，第二种是利用虚拟订单来建模limit order repegging. 同时，也比较了第一种方式得到的survival function与不同order book档位的关联，以及第二种方式的top level的研究。</p>
+<h2 id="5-1-Generating-of-training-data"><a href="#5-1-Generating-of-training-data" class="headerlink" title="5.1 Generating of training data"></a>5.1 Generating of training data</h2><p>第一种得到 ${(\bm{x_i}, z_i, \delta_i)}_{i&#x3D;1}^N$的方式是记录所有与某个订单挂单后有关的信息。如果最终成交，那么记录为filled, 不然记录为censored。time-to-fill在这里便指order submission后到观测到最终记录的时间。<br>另一种是利用虚假的订单，即放在交易队列末尾的一手订单。特别的，订单的survival function是与某档位的价格挂钩的，每次订单簿变动时都会检测该订单是否被fill。利用第二种方式，对订单簿中观测到的不同行为进行事后分析，文中只做了与LOB best ask and bid挂钩订单的分析。下图展示了估计的survival function随时间的变化,<br><img src="/images/deep_attentive/image-2.png" alt="order-repegging"></p>
+<p>可以看到成交概率随时间降低，以及成交概率随着order repegging的增加，就是Level1比Level5更好成交。但是，这种visualization只提供了一个survival function平均的视角，并且不能捕捉订单成交概率的微观结构，因此作者提出基于DLd的方式。</p>
+<h2 id="5-2-Fill-statisics-oflimit-orders-placed-inside-the-bid-ask-spread"><a href="#5-2-Fill-statisics-oflimit-orders-placed-inside-the-bid-ask-spread" class="headerlink" title="5.2 Fill statisics oflimit orders placed inside the bid-ask spread"></a>5.2 Fill statisics oflimit orders placed inside the bid-ask spread</h2><p>这里，计算了挂在spread里的订单的成交概率，结合tick和trading activity不同的股票进行分析，九支股票的具体信息如下图。</p>
+<p><img src="/images/deep_attentive/image-6.png" alt="stock statistics"></p>
+<p>直观上，交易tick较大的stock更倾向挂单在spread中，甚至跨过spread，但不能保证立刻成交，一个提升了best quotes的订单也更容易成交。这是合理的因为traders看到会立刻用liquidity taking的order match。</p>
+<p><img src="/images/deep_attentive/image-3.png" alt="stocks survival"><br><img src="/images/deep_attentive/image-4.png" alt="sutvial analysis stocks"></p>
+<p>结合上面两张图的结果可以得到：</p>
+<ul>
+<li>提升了best quotes的订单更容易成交，是合理的因为traders看到会立刻用liquidity taking的order match</li>
+<li>大tick股票挂在spread中的成交概率在短时间内显著上升到与best quote接近，这说明如果订单几秒内被成交则价格会向有利方向移动，否则价格可能会反向移动，使得订单rest deeper</li>
+<li>更活跃股票的survival function decay更快</li>
+</ul>
+<h1 id="6-Monotonic-Encoder-Decoder-Convolutional-Transformer"><a href="#6-Monotonic-Encoder-Decoder-Convolutional-Transformer" class="headerlink" title="6. Monotonic Encoder-Decoder Convolutional-Transformer"></a>6. Monotonic Encoder-Decoder Convolutional-Transformer</h1><h2 id="6-1-General-Architecture"><a href="#6-1-General-Architecture" class="headerlink" title="6.1 General Architecture"></a>6.1 General Architecture</h2><p>模型结构由两部分构成。encoder部分，参数$\Phi \in \mathbb{R}^{m_\Phi}$, 处理LOB数据并得到latent representation, 从而被decoder利用，参数为$\Psi \in \mathbb{R}^{m_\Psi+}$来预测limit order的survival function。decoder包含了一个单调的神经网络来保证是单调递减的survival function。encoder部分利用convolutional-transformer来建模LOB数据中复杂的依赖和影响关系。</p>
+<p><img src="/images/deep_attentive/image-7.png" alt="conv-transformer models"></p>
+<h2 id="6-2-Convolutional-Transformer-Encoder"><a href="#6-2-Convolutional-Transformer-Encoder" class="headerlink" title="6.2 Convolutional-Transformer Encoder"></a>6.2 Convolutional-Transformer Encoder</h2><p>encoder结构如下所示，处理LOB时序数据并捕捉non-Marokovian的动态关系，其中包括两部分：一个locally-aware的卷积网络和一个transfomer模型。locally-aware的网络包含3个不同的Dilated Causal Convolutional(DCC)neural network来处理LOB数据并产生对应的queries, keys和values。利用卷积网络的输出作为transfomer的Q,K,V使得encoder更能关注到local context, 是的transformer具备鉴别values是异常值还是某种模式。<br><img src="/images/deep_attentive/image-8.png" alt="Structure of conv-Transformer"></p>
+<p>因此，DCCs的操作可以理解成一组数据驱动的local filters。从原始时间序列到卷积输出的hidden representation增强了对LOB的动态表述，从而transformer的自注意力机制也能捕捉到复杂的local依赖关系。另外，每一个DCCs的参数都是被调优用来从LOB中提取不同的相关特征。。比如，有些用来提取trend, 有些用来检测异常等。每个convolution neural network都有一层causal convolution构成，可以表示为：</p>
+<p><img src="/images/deep_attentive/image-9.png" alt="qkv formula"></p>
+<p>其中p是的dilation factor. 这里卷积网络主要是作为融入了local context的特征提取器，因此比较简单，appendix中也有增加卷积网络层数的实验结果。</p>
+<p>cnvolutional-Transformer的优点在于卷积层使得模型locally-aware并且稀疏的self-attention缓解了空间复杂度，是的计算attention的复杂度从$O(L^2)$降低到$O(L(log(L))^2)$,  self-attention以及multi-head attention的原理就不介绍了。</p>
+<h2 id="6-3-Monotonic-Decoder"><a href="#6-3-Monotonic-Decoder" class="headerlink" title="6.3 Monotonic Decoder"></a>6.3 Monotonic Decoder</h2><p>在生存分析中，survival function需要随着时间递减，作者在decoder中使用单调网络来保证这点。decoder的输出$f_\Phi(.)$与CDF的性质一致，因为满足：<br>$$<br>\text { (i) } \lim <em>{t \rightarrow-\infty} f</em>{\Psi}(t, \mathbf{x})&#x3D;0, \text { (ii) } \lim <em>{t \rightarrow \infty} f</em>{\Psi}(t, \mathbf{x})&#x3D;1, \text { (iii) } \frac{\partial f_{\Psi}(t, \mathbf{x})}{\partial t} \geq 0<br>$$<br>具体的细节appendix中有提供，但从下面这个图也可以直观理解，encoder这里会加入时间步t并保证其weight为正实数，最终再对得到的survival function求导。<br><img src="/images/deep_attentive/image-10.png" alt="monotonic decoder"></p>
+<h1 id="7-Experiments"><a href="#7-Experiments" class="headerlink" title="7. Experiments"></a>7. Experiments</h1><h2 id="7-1-Predictive-Features"><a href="#7-1-Predictive-Features" class="headerlink" title="7.1 Predictive Features"></a>7.1 Predictive Features</h2><p>自变量分为<em>slow-moving</em>和<em>fast-moving</em>的, slow-moving features能提供日内的交易模式，其中一种是return的volatility，通常在开盘时候会比较高因为uncertainty和对overnight information的调整。同样的现象在交易量上也有体现，开收盘时会更高。fast-moving的features能够帮助更细粒度的预测，作者指出了几种可能比较重要的：bid-ask spread的未来演化，volatility, order arrival speed。最终使用的自变量有五档量价和volume imbalance, microprice这些。</p>
+<h2 id="7-2-Model-Fit"><a href="#7-2-Model-Fit" class="headerlink" title="7.2 Model Fit"></a>7.2 Model Fit</h2><p>下面是很多实验结果，可以看到：</p>
+<ul>
+<li>提出的方法在RCLL评价指标下超过了benchmark models</li>
+<li>考虑到time-varying dynamics的模型表现更好</li>
+<li>convolutional-Transformer因为能更好的处理信息lookback window变长时效果也有提升， 但LSTM or CNN未观察到</li>
+</ul>
+<p><img src="/images/deep_attentive/image-11.png" alt="observed orders perform"></p>
+<p><img src="/images/deep_attentive/image-12.png" alt="pegged orders dataset"></p>
+<p><img src="/images/deep_attentive/image-13.png" alt="percentage improvement"></p>
+<h1 id="7-3-Model-Interpretability"><a href="#7-3-Model-Interpretability" class="headerlink" title="7.3 Model Interpretability"></a>7.3 Model Interpretability</h1><p>作者主要利用attention heatmaps和shapley values来进行模型解释，从下图中不同head的attention map能看到，最左侧关注400 trades之前的volatility降低，其余的head有着稀疏的attention模式，表明模型结合了短期和长期信息来做出预测。<br><img src="/images/deep_attentive/image-14.png" alt="attention heatmaps"></p>
+<p>shapley values的beeswarm plot主要画的是基本的MN-MLP模型的结果，虽然不是本文用到的复杂模型但能提供一些理解，能直接看到模型给了<em>fast-moving</em>的features更多的权重。</p>
+<p><img src="/images/deep_attentive/image-15.png" alt="shapley values"></p>
+<h1 id="8-Conclusions"><a href="#8-Conclusions" class="headerlink" title="8. Conclusions"></a>8. Conclusions</h1><p>本文结合convolutional-Transformer提出了一种估计limit order成交概率的方式。为训练和评估模型，使用了right-censored log-likelihood，是一种proper的scoring rule。模型在observed orders dataset和pegged orders dataset上均超越了基准模型。最终，借助Shapley values和attention heatmaps来对特征重要性做出评估。</p>
+]]></content>
+      <categories>
+        <category>Learn</category>
+      </categories>
+      <tags>
+        <tag>quantitative finance</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Volatility Forecasting</title>
+    <url>/2023/12/15/Volatility_Forecasting/</url>
+    <content><![CDATA[<h1 id="Volatility-Forecasting-with-Machine-Learning-and-Intraday-Commonality"><a href="#Volatility-Forecasting-with-Machine-Learning-and-Intraday-Commonality" class="headerlink" title="Volatility Forecasting with Machine Learning and Intraday Commonality"></a>Volatility Forecasting with Machine Learning and Intraday Commonality</h1><h1 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h1><p>本文主要基于机器学习模型探索股票的commnality对预测realized volatility(RV)的影响，结论表明neural networks表现超过linear &amp; tree-based models，该结论在直接用未出现在训练集里的股票测试时同样成立，这说明了股票之间共同的volatility mechanism。文中最后利用过去的日内波动率来预测未来一天的波动率，预测效果能够超过传统只用daily RVs的方式，并观察到了time-of-day效应对预测的影响。</p>
+<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>HFT往往需要robust并且准确地预测日内波动率，Engle and Sokalska指出intraday volatility的预测对风险管理，衍生品定价，量化策略设计都有重要用途。但是学界缺少相关研究，大部分都是从日频收益出发，结果很难推广到日内。</p>
+<p>本文利用美国S&amp;P 500指数中流动性最好的100支股票从2011年7月到2021年6月的高频数据，研究了non-parametric ML models在forecast multi-asset intraday volatility上的表现。首先提出了日内波动率commonality的衡量方式，实验结果说明commnality能够提升预测表现，同时NNs在样本外表现也超出linear &amp; tree-based models。当应用训练集未出现的股票做测试时，同样获得较好的结果，降低了对复杂模型过拟合风险的担忧。最后，日内波动率能为预测未来daily波动率提供额外信息。</p>
+<h1 id="1-Related-Literature"><a href="#1-Related-Literature" class="headerlink" title="1. Related Literature"></a>1. Related Literature</h1><p>这里主要介绍了相关文献，第一部分是研究金融市场commonality，第二部分是预测daily波动率，但是预测日内波动率的关注较少，传统GARCH和SV 模型可能由于参数限制难以有效考虑金融变量间复杂且非线性的关系。第三，ML模型在金融领域潜力巨大，Bucci(2020)的研究表明RNNs在预测S&amp;P指数月度波动率方面能够超过传统计量经济的模型。</p>
+<h1 id="2-Data-and-RV"><a href="#2-Data-and-RV" class="headerlink" title="2. Data and RV"></a>2. Data and RV</h1><p>数据使用从2011-07-01到2021-06-30 S&amp;P index Top 100成分股的高频数据，筛选掉没有横跨整个周期的股票，剩余93支，板块分类如下：<br><img src="/images/vol_forecast/image.png" alt="Alt text1"></p>
+<p>$P_{i,t}$代表金融资产i的价格过程如下，$\mu_i$代表drift, $\sigma_{i,t}$代表顺势波动率，$W_t$是标准布朗运动</p>
+<p>$$<br>dlogP_{i,t} &#x3D; \mu_idt + \sigma_{i,t}dW_t<br>$$</p>
+<p>股票i在(t-b, t]之间的theoretical integrated variance表示为:<br>$$<br>IV_{i,t}(b) &#x3D; \int_{t-b}^{t}\sigma_{i,s}^2 ds<br>$$<br>b代表回看长度，如10min, 30min, 1天。每分钟的中间价对数收益为：</p>
+<p>$$<br>r_{i,t}:&#x3D;log(\frac{P_{i,t}}{P_{i,t-1}})<br>$$</p>
+<p>日内收益的平方和是IV的一致估计量，RV可以被当作IV的proxy，在(t-b, t]之间，RV被定义为：</p>
+<p>$$<br>RV_{i,t}^{(b)} :&#x3D; log[\sum_{s&#x3D;t-b+1}^t r_{i,s}^2]<br>$$</p>
+<p>overnight的信息不再考虑范围内。</p>
+<p>数据处理部分对收益做了0.5%的winsorize。下图可以看到整个样本里在不同回看周期上pairwise correlation的直方图，具体计算方式应该是每两只股票的RV或者return计算一个correlation，然后看整体数值，也就是$C_{93}^2$个数据点的分布，比较有趣的是日内随着b（回看窗口）的拉长，RV相关性实际会先上升，但到1-day又会降低，这说明股票间日内波动率的关联可能比daily波动率更稳定。<br><img src="/images/vol_forecast/image-1.png" alt="Alt text2"></p>
+<p>Figure2可以看到股票之间整体的daily RV的时序变化，两边quantile的弥散度在欧洲主权债务危机，中国股灾，英国脱欧，中美贸易战和COVID-19期间都明显紧缩，Figure 3可以看到30min RV在一天内形成的rever-J-shape.<br><img src="/images/vol_forecast/image-2.png" alt="Alt text3"><br><img src="/images/vol_forecast/image-3.png" alt="Alt text4"></p>
+<h1 id="3-Commonality-Estimation"><a href="#3-Commonality-Estimation" class="headerlink" title="3. Commonality Estimation"></a>3. Commonality Estimation</h1><p>这部分主要讲如何估计股票之间的commonality，主要利用如下回归的adjust $R^2$作为波动率commonality的衡量，其中$\mathrm{RV}_{M, t}^{(b)}$代表t时刻根据单个股票加权计算的市场波动率:</p>
+<p>$$<br>\mathrm{RV}<em>{M, t}^{(b)}&#x3D;\frac{1}{N} \sum</em>{i&#x3D;1}^N \mathrm{RV}<em>{i, t}^{(b)},\qquad \mathrm{RV}</em>{i, t}^{(b)}&#x3D;\alpha_i+\beta_i \mathrm{RV}<em>{M, t}^{(b)}+\epsilon</em>{i, t}<br>$$</p>
+<p>每月进行一次回归并在股票之间取平均，可以从Figure4看到日内的commonality现象是要比daily的更显著且稳定的。Figure5中展示了在交易时段每半个小时的commonality的均值和标准差，与之前波动率的J-curve不同，这里接近收盘commonality会逐渐上升。</p>
+<p><img src="/images/vol_forecast/image-4.png" alt="Alt text5"><br><img src="/images/vol_forecast/image-5.png" alt="Alt text6"></p>
+<h1 id="4-Methodology"><a href="#4-Methodology" class="headerlink" title="4. Methodology"></a>4. Methodology</h1><p>本节尝试利用股票之间的commonality来预测跨资产的波动率，整体模型可以表示为：<br>$$<br>\begin{aligned}<br>\mathrm{RV}<em>{i, t+b}^{(b)} &amp; &#x3D;F_i(\mathbf{u} ; \theta)+\epsilon</em>{i, t+b} \<br>&amp; &#x3D;F_i\left(\mathrm{RV}<em>{i, t}^{(b)}, \ldots, \mathrm{RV}</em>{i, t-(p-1) b}^{(b)}, \mathrm{RV}<em>{M, t}^{(b)}, \ldots, \mathrm{RV}</em>{M, t-(p-1) b}^{(b)} ; \theta\right)+\epsilon_{i, t+b}<br>\end{aligned}<br>$$<br>注意这里$\mathrm{RV}_{i, t+b}^{(b)}$代表的是未来波动率。输入特征包含两部分，首先是individual features，包含单个股票截止t已知的信息，另外是market features，聚合了所有股票包含t时刻已知的信息，$\theta$代表模型参数。模型的细节这里就不赘述了，基本介绍了Seasonal ARIMA, HAR with diurnal effects, OLS, Lasso&#x2F;Ridge, XGBoost, MLP以及LSTM。model训练部分会有三种方式，逐渐向其中加入cross asset和market information:</p>
+<ol>
+<li>Single: 只使用股票i的过去RVs作为特征</li>
+<li>Universal: 股票i还是只是本身特征，但是所有股票的数据放在一起训练</li>
+<li>Augmented: 股票i使用individual and market features，同样股票放在一起训练</li>
+</ol>
+<p>评价指标使用：</p>
+<ul>
+<li><p>Mean - squarederror (MSE): $\frac{1}{N} \sum_{i&#x3D;1}^N \frac{1}{T_{\text {test }}} \sum_{t \in \mathcal{T}<em>{\text {test }}}\left(\mathrm{RV}</em>{i, t}^{(b)}-\widehat{\mathrm{RV}}_{i, t}^{(b)}\right)^2$,</p>
+</li>
+<li><p>Quasi - likelihood (QLIKE): $\frac{1}{N} \sum_{i&#x3D;1}^N \frac{1}{T_{\text {trst }}} \sum_{t \in \mathcal{T}<em>{\text {test }}}\left[\frac{\exp \left(\mathrm{RV}</em>{i, t}^{(b)}\right)}{\exp \left(\widehat{\mathrm{RV}}<em>{i, t}^{(b)}\right)}-\left(\mathrm{RV}</em>{i, t}^{(b)}-\widehat{\mathrm{RV}}_{i, t}^{(b)}\right)-1\right]$</p>
+</li>
+</ul>
+<h1 id="5-Experiments"><a href="#5-Experiments" class="headerlink" title="5. Experiments"></a>5. Experiments</h1><p>数据集会被划分为: training, validation, testing，采用roll forward的方式，一年做validation, 一年testing，前面的日期都作为training。 MLP &amp; NNs会采用ensemble的方式，即在不同的初始化条件下训练多个模型后做平均。</p>
+<p><img src="/images/vol_forecast/image-6.png" alt="Alt text7"></p>
+<p>实验结果如上表所示，可以看到LSTM能够在日内表现最好，并且有着最高的realized utility。但是能看到，在1-day的时候,LASSO表现最好，这可能是因为数据稀缺性导致的(相比日内)。Figure 7中展示了不同trading shcema下QLIKEs的差值，即$\Delta QLIKE$, 该数值越负代表out of sample表现的提升，可以看到Universal相比Single的提升其实并不名贡献，但是加入市场的信息后提高了预测表现。</p>
+<p><img src="/images/vol_forecast/image-7.png" alt="Alt text8"></p>
+<p>另外一个值得思考的问题是Universal或Augmented setting的提升是否与股票的commonality有联系。从Figure8可以看到，样本外的QLIKE是会随着股票commonality的提升而下降的。<br><img src="/images/vol_forecast/image-8.png" alt="Alt text9"></p>
+<p>为了测试拟合模型的generalization能力，可以使用训练集里未出现的股票来测试模型，记录模型使用的股票为raw stocks, 新的测试股票为unseen stocks, Figure 9展示了得到的结果，能够得出结论，在聚合的股票池上训练出的NN模型有更好的预测能力，为股票间的<em>universal volatility mechanism</em>提供了证据。</p>
+<p><img src="/images/vol_forecast/image-9.png" alt="Alt text10"></p>
+<h1 id="6-Forecasting-Daily-RVs-with-Intraday-RVs"><a href="#6-Forecasting-Daily-RVs-with-Intraday-RVs" class="headerlink" title="6. Forecasting Daily RVs with Intraday RVs"></a>6. Forecasting Daily RVs with Intraday RVs</h1><p>从前述实验可以看到预测日内波动率时股票之间commonality的作用，这里对利用日内波动率来预测未来的daily波动率进行研究，介绍了<em>Intraday2Daily</em>的方式，模型为：</p>
+<p>$$<br>\mathrm{RV}<em>{i, t+1}^{(d)}&#x3D;F_i\left(\mathrm{RV}</em>{i, t}^{(b)}, \ldots, \mathrm{RV}<em>{i, t-(p-1) b}^{(b)}, \mathrm{RV}</em>{i, t-1}^{(d)}, \ldots, \mathrm{RV}<em>{i, t-(p-1)}^{(d)} ; \theta\right)+\epsilon</em>{i, t+1}<br>$$<br>这里，前半部分$\left(\mathrm{RV}<em>{i, t}^{(b)}, \ldots, \mathrm{RV}</em>{i, t-(k-1) b}^{(b)}\right)$代表股票i在日内horizon b上的波动率，后半部分$\left(\mathrm{RV}<em>{i, t-1}^{(d)}, \ldots, \mathrm{RV}</em>{i, t-(p-1)}^{(d)}\right)$代表过去daily RVs，但是只截止到t-1天，相当于用t天的日内波动率和t-1之前的daily RVs来预测未来RVs。</p>
+<p><img src="/images/vol_forecast/image-10.png" alt="Alt text11"></p>
+<p><img src="/images/vol_forecast/image-11.png" alt="Alt text12"></p>
+<p>与之前的实验结果相比，这种方式能够提升基准模型的表现，使用了日间信息的MLP模型达到了最好的表现，同时也达到了更高的utilities。最后，这里还研究了time-of-day的现象，使用上述实验最近一天OLS model intraday RV的系数进行比较，可以看到，接近收盘的波动率时最重要的指标，而非白天的波动模式。有数据表明收盘半小时会占据美国市场3000支股票2020年前几个月约23%的交易量，这也使得收盘前的波动率成为预测下一日波动率的重要信息。<br><img src="/images/vol_forecast/image-12.png" alt="Alt text13"></p>
+<p>这篇文章对股票的commonality进行了详细研究，并且比较了不同模型和setting下的表现， NN因为能够捕捉predictors之间的复杂关系而有着更好的表现，同时训练出的模型也展示出了一定的泛化能力，即在未见过的股票上进行预测。最后，利用日内波动率预测daily RVs有一定效果，同时也能观察到收盘前波动率的重要性。受限于篇幅，很多细节没有展开，大家感兴趣可以参考原文。</p>
 ]]></content>
       <categories>
         <category>Learn</category>
