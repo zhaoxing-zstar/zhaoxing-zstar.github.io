@@ -91,122 +91,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Change the default working directory of Jupyter Notebook</title>
-    <url>/2021/02/03/Jupyter-Change-Dir/</url>
-    <content><![CDATA[<p><strong>后来发现好像直接从那个directory下面打开<code>Jupyter Lab</code>就可以…</strong></p>
-<h3 id="下载Anaconda3"><a href="#下载Anaconda3" class="headerlink" title="下载Anaconda3"></a>下载Anaconda3</h3><p>首先从官网下载Anaconda3的Individual Edition，下载好后打开Anaconda3 Prompt，输入:<br>jupyter notebook –generate-config:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">jupyter notebook --generate-config</span><br></pre></td></tr></table></figure>
-<hr>
-<h3 id="打开配置文件"><a href="#打开配置文件" class="headerlink" title="打开配置文件"></a>打开配置文件</h3><p>输入完后，会显示文件产生的路径，按路径找到jupyter_notebook_config.py，用txt或者pycharm打开，<br>按<code>ctrl+F</code>搜索notebook_dir，找到后填入想要设置的路径并保存（注意顺便Uncomment这一行，就是删掉前面的<code>#</code>号,加路径时最好前面加上<code>r</code>转义<br><img src="/images/jupyter/notebook_dir.png" alt="notebook_dir"></p>
-<hr>
-<h3 id="修改JupyterNotebook快捷方式的目标属性"><a href="#修改JupyterNotebook快捷方式的目标属性" class="headerlink" title="修改JupyterNotebook快捷方式的目标属性"></a>修改JupyterNotebook快捷方式的目标属性</h3><p>右击JupyterNotebook快捷方式，选择[属性]，删除[目标]属性中的[%USERPROFILE%]，点击[确定]</p>
-<p><img src="/images/jupyter/change_prop.png" alt="change_prop"></p>
-<p>修改完成，再打开Anaconda Prompt输入jupyter notebook打开工作路径就发生变化了。</p>
-]]></content>
-      <categories>
-        <category>Settings</category>
-      </categories>
-      <tags>
-        <tag>Jupyter</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Old Version Home Page Setup</title>
-    <url>/2021/02/08/Page-Set-Up/</url>
-    <content><![CDATA[<h3 id="NPM-amp-Hexo-Setup"><a href="#NPM-amp-Hexo-Setup" class="headerlink" title="NPM &amp; Hexo Setup"></a>NPM &amp; Hexo Setup</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt update \\</span><br><span class="line">sudo apt install nodejs \\</span><br><span class="line">sudo apt install npm \\</span><br><span class="line">node -v \\</span><br><span class="line">npm -v \\</span><br><span class="line">npm install -g hexo-cli \\</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;PATH=&quot;$PATH:./node_modules/.bin&quot;&#x27;</span> &gt;&gt; ~/.profile</span><br></pre></td></tr></table></figure>
-
-<h3 id="Hexo-Commands"><a href="#Hexo-Commands" class="headerlink" title="Hexo Commands"></a>Hexo Commands</h3><p>check at: <a href="https://hexo.io/docs/commands">https://hexo.io/docs/commands</a></p>
-<p>Ref: <a href="https://shen-yu.github.io/2019/ayer/">Ayer中文说明</a>. All modifications for this website should be done in <code>themes</code> folder, instead of <code>public</code> folder</p>
-<h3 id="Git-Setup"><a href="#Git-Setup" class="headerlink" title="Git Setup"></a>Git Setup</h3><p>Git cheatsheet: <a href="https://education.github.com/git-cheat-sheet-education.pdf">cheatsheet</a> </p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#clone from websit</span></span><br><span class="line">git <span class="built_in">clone</span> XXX.git</span><br><span class="line"></span><br><span class="line"><span class="comment"># generate private &amp; public key</span></span><br><span class="line">ssh -t rsa -C <span class="string">&quot;email@XX.com&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># upload public key to github, test with:</span></span><br><span class="line">ssh git@github.com</span><br><span class="line"></span><br><span class="line"><span class="comment">#set up configs</span></span><br><span class="line">git config --global user.name <span class="string">&quot;name&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;email&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#handle proxy error</span></span><br><span class="line">git config --global --<span class="built_in">unset</span> http.proxy</span><br><span class="line">git config --global --<span class="built_in">unset</span> https.proxy</span><br><span class="line"></span><br><span class="line"><span class="comment">#make changes and submit</span></span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&quot;message&quot;</span></span><br><span class="line">git add remote origin <span class="string">&quot;reop.git&quot;</span></span><br><span class="line">git psuh origin main</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Website</category>
-      </categories>
-      <tags>
-        <tag>Home Page</tag>
-        <tag>Ruby</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CS224n: Natural Language Processing with Deep Learning</title>
-    <url>/2022/06/09/NLP-with-DL/</url>
-    <content><![CDATA[<p>Click here hhhhh: <a href="https://zhaoxing-zstar.github.io/CS224n-Natural-Language-Processing-with-Deep-Learning/">https://zhaoxing-zstar.github.io/CS224n-Natural-Language-Processing-with-Deep-Learning/</a></p>
-]]></content>
-      <categories>
-        <category>Learn</category>
-      </categories>
-      <tags>
-        <tag>NLP</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Volatility Forecasting</title>
-    <url>/2023/12/15/Volatility_Forecasting/</url>
-    <content><![CDATA[<h1 id="Volatility-Forecasting-with-Machine-Learning-and-Intraday-Commonality"><a href="#Volatility-Forecasting-with-Machine-Learning-and-Intraday-Commonality" class="headerlink" title="Volatility Forecasting with Machine Learning and Intraday Commonality"></a>Volatility Forecasting with Machine Learning and Intraday Commonality</h1><h1 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h1><p>本文主要基于机器学习模型探索股票的commnality对预测realized volatility(RV)的影响，结论表明neural networks表现超过linear &amp; tree-based models，该结论在直接用未出现在训练集里的股票测试时同样成立，这说明了股票之间共同的volatility mechanism。文中最后利用过去的日内波动率来预测未来一天的波动率，预测效果能够超过传统只用daily RVs的方式，并观察到了time-of-day效应对预测的影响。</p>
-<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>HFT往往需要robust并且准确地预测日内波动率，Engle and Sokalska指出intraday volatility的预测对风险管理，衍生品定价，量化策略设计都有重要用途。但是学界缺少相关研究，大部分都是从日频收益出发，结果很难推广到日内。</p>
-<p>本文利用美国S&amp;P 500指数中流动性最好的100支股票从2011年7月到2021年6月的高频数据，研究了non-parametric ML models在forecast multi-asset intraday volatility上的表现。首先提出了日内波动率commonality的衡量方式，实验结果说明commnality能够提升预测表现，同时NNs在样本外表现也超出linear &amp; tree-based models。当应用训练集未出现的股票做测试时，同样获得较好的结果，降低了对复杂模型过拟合风险的担忧。最后，日内波动率能为预测未来daily波动率提供额外信息。</p>
-<h1 id="1-Related-Literature"><a href="#1-Related-Literature" class="headerlink" title="1. Related Literature"></a>1. Related Literature</h1><p>这里主要介绍了相关文献，第一部分是研究金融市场commonality，第二部分是预测daily波动率，但是预测日内波动率的关注较少，传统GARCH和SV 模型可能由于参数限制难以有效考虑金融变量间复杂且非线性的关系。第三，ML模型在金融领域潜力巨大，Bucci(2020)的研究表明RNNs在预测S&amp;P指数月度波动率方面能够超过传统计量经济的模型。</p>
-<h1 id="2-Data-and-RV"><a href="#2-Data-and-RV" class="headerlink" title="2. Data and RV"></a>2. Data and RV</h1><p>数据使用从2011-07-01到2021-06-30 S&amp;P index Top 100成分股的高频数据，筛选掉没有横跨整个周期的股票，剩余93支，板块分类如下：<br><img src="/images/vol_forecast/image.png" alt="Alt text1"></p>
-<p>$P_{i,t}$代表金融资产i的价格过程如下，$\mu_i$代表drift, $\sigma_{i,t}$代表顺势波动率，$W_t$是标准布朗运动</p>
-<p>$$<br>dlogP_{i,t} &#x3D; \mu_idt + \sigma_{i,t}dW_t<br>$$</p>
-<p>股票i在(t-b, t]之间的theoretical integrated variance表示为:<br>$$<br>IV_{i,t}(b) &#x3D; \int_{t-b}^{t}\sigma_{i,s}^2 ds<br>$$<br>b代表回看长度，如10min, 30min, 1天。每分钟的中间价对数收益为：</p>
-<p>$$<br>r_{i,t}:&#x3D;log(\frac{P_{i,t}}{P_{i,t-1}})<br>$$</p>
-<p>日内收益的平方和是IV的一致估计量，RV可以被当作IV的proxy，在(t-b, t]之间，RV被定义为：</p>
-<p>$$<br>RV_{i,t}^{(b)} :&#x3D; log[\sum_{s&#x3D;t-b+1}^t r_{i,s}^2]<br>$$</p>
-<p>overnight的信息不再考虑范围内。</p>
-<p>数据处理部分对收益做了0.5%的winsorize。下图可以看到整个样本里在不同回看周期上pairwise correlation的直方图，具体计算方式应该是每两只股票的RV或者return计算一个correlation，然后看整体数值，也就是$C_{93}^2$个数据点的分布，比较有趣的是日内随着b（回看窗口）的拉长，RV相关性实际会先上升，但到1-day又会降低，这说明股票间日内波动率的关联可能比daily波动率更稳定。<br><img src="/images/vol_forecast/image-1.png" alt="Alt text2"></p>
-<p>Figure2可以看到股票之间整体的daily RV的时序变化，两边quantile的弥散度在欧洲主权债务危机，中国股灾，英国脱欧，中美贸易战和COVID-19期间都明显紧缩，Figure 3可以看到30min RV在一天内形成的rever-J-shape.<br><img src="/images/vol_forecast/image-2.png" alt="Alt text3"><br><img src="/images/vol_forecast/image-3.png" alt="Alt text4"></p>
-<h1 id="3-Commonality-Estimation"><a href="#3-Commonality-Estimation" class="headerlink" title="3. Commonality Estimation"></a>3. Commonality Estimation</h1><p>这部分主要讲如何估计股票之间的commonality，主要利用如下回归的adjust $R^2$作为波动率commonality的衡量，其中$\mathrm{RV}_{M, t}^{(b)}$代表t时刻根据单个股票加权计算的市场波动率:</p>
-<p>$$<br>\mathrm{RV}<em>{M, t}^{(b)}&#x3D;\frac{1}{N} \sum</em>{i&#x3D;1}^N \mathrm{RV}<em>{i, t}^{(b)},\qquad \mathrm{RV}</em>{i, t}^{(b)}&#x3D;\alpha_i+\beta_i \mathrm{RV}<em>{M, t}^{(b)}+\epsilon</em>{i, t}<br>$$</p>
-<p>每月进行一次回归并在股票之间取平均，可以从Figure4看到日内的commonality现象是要比daily的更显著且稳定的。Figure5中展示了在交易时段每半个小时的commonality的均值和标准差，与之前波动率的J-curve不同，这里接近收盘commonality会逐渐上升。</p>
-<p><img src="/images/vol_forecast/image-4.png" alt="Alt text5"><br><img src="/images/vol_forecast/image-5.png" alt="Alt text6"></p>
-<h1 id="4-Methodology"><a href="#4-Methodology" class="headerlink" title="4. Methodology"></a>4. Methodology</h1><p>本节尝试利用股票之间的commonality来预测跨资产的波动率，整体模型可以表示为：<br>$$<br>\begin{aligned}<br>\mathrm{RV}<em>{i, t+b}^{(b)} &amp; &#x3D;F_i(\mathbf{u} ; \theta)+\epsilon</em>{i, t+b} \<br>&amp; &#x3D;F_i\left(\mathrm{RV}<em>{i, t}^{(b)}, \ldots, \mathrm{RV}</em>{i, t-(p-1) b}^{(b)}, \mathrm{RV}<em>{M, t}^{(b)}, \ldots, \mathrm{RV}</em>{M, t-(p-1) b}^{(b)} ; \theta\right)+\epsilon_{i, t+b}<br>\end{aligned}<br>$$<br>注意这里$\mathrm{RV}_{i, t+b}^{(b)}$代表的是未来波动率。输入特征包含两部分，首先是individual features，包含单个股票截止t已知的信息，另外是market features，聚合了所有股票包含t时刻已知的信息，$\theta$代表模型参数。模型的细节这里就不赘述了，基本介绍了Seasonal ARIMA, HAR with diurnal effects, OLS, Lasso&#x2F;Ridge, XGBoost, MLP以及LSTM。model训练部分会有三种方式，逐渐向其中加入cross asset和market information:</p>
-<ol>
-<li>Single: 只使用股票i的过去RVs作为特征</li>
-<li>Universal: 股票i还是只是本身特征，但是所有股票的数据放在一起训练</li>
-<li>Augmented: 股票i使用individual and market features，同样股票放在一起训练</li>
-</ol>
-<p>评价指标使用：</p>
-<ul>
-<li><p>Mean - squarederror (MSE): $\frac{1}{N} \sum_{i&#x3D;1}^N \frac{1}{T_{\text {test }}} \sum_{t \in \mathcal{T}<em>{\text {test }}}\left(\mathrm{RV}</em>{i, t}^{(b)}-\widehat{\mathrm{RV}}_{i, t}^{(b)}\right)^2$,</p>
-</li>
-<li><p>Quasi - likelihood (QLIKE): $\frac{1}{N} \sum_{i&#x3D;1}^N \frac{1}{T_{\text {trst }}} \sum_{t \in \mathcal{T}<em>{\text {test }}}\left[\frac{\exp \left(\mathrm{RV}</em>{i, t}^{(b)}\right)}{\exp \left(\widehat{\mathrm{RV}}<em>{i, t}^{(b)}\right)}-\left(\mathrm{RV}</em>{i, t}^{(b)}-\widehat{\mathrm{RV}}_{i, t}^{(b)}\right)-1\right]$</p>
-</li>
-</ul>
-<h1 id="5-Experiments"><a href="#5-Experiments" class="headerlink" title="5. Experiments"></a>5. Experiments</h1><p>数据集会被划分为: training, validation, testing，采用roll forward的方式，一年做validation, 一年testing，前面的日期都作为training。 MLP &amp; NNs会采用ensemble的方式，即在不同的初始化条件下训练多个模型后做平均。</p>
-<p><img src="/images/vol_forecast/image-6.png" alt="Alt text7"></p>
-<p>实验结果如上表所示，可以看到LSTM能够在日内表现最好，并且有着最高的realized utility。但是能看到，在1-day的时候,LASSO表现最好，这可能是因为数据稀缺性导致的(相比日内)。Figure 7中展示了不同trading shcema下QLIKEs的差值，即$\Delta QLIKE$, 该数值越负代表out of sample表现的提升，可以看到Universal相比Single的提升其实并不名贡献，但是加入市场的信息后提高了预测表现。</p>
-<p><img src="/images/vol_forecast/image-7.png" alt="Alt text8"></p>
-<p>另外一个值得思考的问题是Universal或Augmented setting的提升是否与股票的commonality有联系。从Figure8可以看到，样本外的QLIKE是会随着股票commonality的提升而下降的。<br><img src="/images/vol_forecast/image-8.png" alt="Alt text9"></p>
-<p>为了测试拟合模型的generalization能力，可以使用训练集里未出现的股票来测试模型，记录模型使用的股票为raw stocks, 新的测试股票为unseen stocks, Figure 9展示了得到的结果，能够得出结论，在聚合的股票池上训练出的NN模型有更好的预测能力，为股票间的<em>universal volatility mechanism</em>提供了证据。</p>
-<p><img src="/images/vol_forecast/image-9.png" alt="Alt text10"></p>
-<h1 id="6-Forecasting-Daily-RVs-with-Intraday-RVs"><a href="#6-Forecasting-Daily-RVs-with-Intraday-RVs" class="headerlink" title="6. Forecasting Daily RVs with Intraday RVs"></a>6. Forecasting Daily RVs with Intraday RVs</h1><p>从前述实验可以看到预测日内波动率时股票之间commonality的作用，这里对利用日内波动率来预测未来的daily波动率进行研究，介绍了<em>Intraday2Daily</em>的方式，模型为：</p>
-<p>$$<br>\mathrm{RV}<em>{i, t+1}^{(d)}&#x3D;F_i\left(\mathrm{RV}</em>{i, t}^{(b)}, \ldots, \mathrm{RV}<em>{i, t-(p-1) b}^{(b)}, \mathrm{RV}</em>{i, t-1}^{(d)}, \ldots, \mathrm{RV}<em>{i, t-(p-1)}^{(d)} ; \theta\right)+\epsilon</em>{i, t+1}<br>$$<br>这里，前半部分$\left(\mathrm{RV}<em>{i, t}^{(b)}, \ldots, \mathrm{RV}</em>{i, t-(k-1) b}^{(b)}\right)$代表股票i在日内horizon b上的波动率，后半部分$\left(\mathrm{RV}<em>{i, t-1}^{(d)}, \ldots, \mathrm{RV}</em>{i, t-(p-1)}^{(d)}\right)$代表过去daily RVs，但是只截止到t-1天，相当于用t天的日内波动率和t-1之前的daily RVs来预测未来RVs。</p>
-<p><img src="/images/vol_forecast/image-10.png" alt="Alt text11"></p>
-<p><img src="/images/vol_forecast/image-11.png" alt="Alt text12"></p>
-<p>与之前的实验结果相比，这种方式能够提升基准模型的表现，使用了日间信息的MLP模型达到了最好的表现，同时也达到了更高的utilities。最后，这里还研究了time-of-day的现象，使用上述实验最近一天OLS model intraday RV的系数进行比较，可以看到，接近收盘的波动率时最重要的指标，而非白天的波动模式。有数据表明收盘半小时会占据美国市场3000支股票2020年前几个月约23%的交易量，这也使得收盘前的波动率成为预测下一日波动率的重要信息。<br><img src="/images/vol_forecast/image-12.png" alt="Alt text13"></p>
-<p>这篇文章对股票的commonality进行了详细研究，并且比较了不同模型和setting下的表现， NN因为能够捕捉predictors之间的复杂关系而有着更好的表现，同时训练出的模型也展示出了一定的泛化能力，即在未见过的股票上进行预测。最后，利用日内波动率预测daily RVs有一定效果，同时也能观察到收盘前波动率的重要性。受限于篇幅，很多细节没有展开，大家感兴趣可以参考原文。</p>
-]]></content>
-      <categories>
-        <category>Learn</category>
-      </categories>
-      <tags>
-        <tag>quantitative finance</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Equations of Mathematical Physics Course Page</title>
-    <url>/2021/03/05/mathematical-physics/</url>
-    <content><![CDATA[<p>Click Here: <a href="https://zhaoxing-zstar.github.io/Equations-of-Mathematical-Physics/">Equations of Mathematical Physics</a></p>
-]]></content>
-      <categories>
-        <category>Learn</category>
-      </categories>
-      <tags>
-        <tag>mathematical physics</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>HFT_return</title>
     <url>/2023/07/02/HFT-return/</url>
     <content><![CDATA[<h1 id="How-and-When-are-High-Frequency-Stock-Returns-Predictable"><a href="#How-and-When-are-High-Frequency-Stock-Returns-Predictable" class="headerlink" title="How and When are High-Frequency Stock Returns Predictable?"></a>How and When are High-Frequency Stock Returns Predictable?</h1><ul>
@@ -316,6 +200,137 @@
       </categories>
       <tags>
         <tag>quantitative finance</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Change the default working directory of Jupyter Notebook</title>
+    <url>/2021/02/03/Jupyter-Change-Dir/</url>
+    <content><![CDATA[<p><strong>后来发现好像直接从那个directory下面打开<code>Jupyter Lab</code>就可以…</strong></p>
+<h3 id="下载Anaconda3"><a href="#下载Anaconda3" class="headerlink" title="下载Anaconda3"></a>下载Anaconda3</h3><p>首先从官网下载Anaconda3的Individual Edition，下载好后打开Anaconda3 Prompt，输入:<br>jupyter notebook –generate-config:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">jupyter notebook --generate-config</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="打开配置文件"><a href="#打开配置文件" class="headerlink" title="打开配置文件"></a>打开配置文件</h3><p>输入完后，会显示文件产生的路径，按路径找到jupyter_notebook_config.py，用txt或者pycharm打开，<br>按<code>ctrl+F</code>搜索notebook_dir，找到后填入想要设置的路径并保存（注意顺便Uncomment这一行，就是删掉前面的<code>#</code>号,加路径时最好前面加上<code>r</code>转义<br><img src="/images/jupyter/notebook_dir.png" alt="notebook_dir"></p>
+<hr>
+<h3 id="修改JupyterNotebook快捷方式的目标属性"><a href="#修改JupyterNotebook快捷方式的目标属性" class="headerlink" title="修改JupyterNotebook快捷方式的目标属性"></a>修改JupyterNotebook快捷方式的目标属性</h3><p>右击JupyterNotebook快捷方式，选择[属性]，删除[目标]属性中的[%USERPROFILE%]，点击[确定]</p>
+<p><img src="/images/jupyter/change_prop.png" alt="change_prop"></p>
+<p>修改完成，再打开Anaconda Prompt输入jupyter notebook打开工作路径就发生变化了。</p>
+]]></content>
+      <categories>
+        <category>Settings</category>
+      </categories>
+      <tags>
+        <tag>Jupyter</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CS224n: Natural Language Processing with Deep Learning</title>
+    <url>/2022/06/09/NLP-with-DL/</url>
+    <content><![CDATA[<p>Click here hhhhh: <a href="https://zhaoxing-zstar.github.io/CS224n-Natural-Language-Processing-with-Deep-Learning/">https://zhaoxing-zstar.github.io/CS224n-Natural-Language-Processing-with-Deep-Learning/</a></p>
+]]></content>
+      <categories>
+        <category>Learn</category>
+      </categories>
+      <tags>
+        <tag>NLP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Old Version Home Page Setup</title>
+    <url>/2021/02/08/Page-Set-Up/</url>
+    <content><![CDATA[<h3 id="NPM-amp-Hexo-Setup"><a href="#NPM-amp-Hexo-Setup" class="headerlink" title="NPM &amp; Hexo Setup"></a>NPM &amp; Hexo Setup</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt update \\</span><br><span class="line">sudo apt install nodejs \\</span><br><span class="line">sudo apt install npm \\</span><br><span class="line">node -v \\</span><br><span class="line">npm -v \\</span><br><span class="line">npm install -g hexo-cli \\</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;PATH=&quot;$PATH:./node_modules/.bin&quot;&#x27;</span> &gt;&gt; ~/.profile</span><br></pre></td></tr></table></figure>
+
+<h3 id="Hexo-Commands"><a href="#Hexo-Commands" class="headerlink" title="Hexo Commands"></a>Hexo Commands</h3><p>check at: <a href="https://hexo.io/docs/commands">https://hexo.io/docs/commands</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>Ref: <a href="https://shen-yu.github.io/2019/ayer/">Ayer中文说明</a>. All modifications for this website should be done in <code>themes</code> folder, instead of <code>public</code> folder</p>
+<h3 id="Git-Setup"><a href="#Git-Setup" class="headerlink" title="Git Setup"></a>Git Setup</h3><p>Git cheatsheet: <a href="https://education.github.com/git-cheat-sheet-education.pdf">cheatsheet</a> </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#clone from websit</span></span><br><span class="line">git <span class="built_in">clone</span> XXX.git</span><br><span class="line"></span><br><span class="line"><span class="comment"># generate private &amp; public key</span></span><br><span class="line">ssh -t rsa -C <span class="string">&quot;email@XX.com&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># upload public key to github, test with:</span></span><br><span class="line">ssh git@github.com</span><br><span class="line"></span><br><span class="line"><span class="comment">#set up configs</span></span><br><span class="line">git config --global user.name <span class="string">&quot;name&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;email&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#handle proxy error</span></span><br><span class="line">git config --global --<span class="built_in">unset</span> http.proxy</span><br><span class="line">git config --global --<span class="built_in">unset</span> https.proxy</span><br><span class="line"></span><br><span class="line"><span class="comment">#make changes and submit</span></span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&quot;message&quot;</span></span><br><span class="line">git add remote origin <span class="string">&quot;reop.git&quot;</span></span><br><span class="line">git psuh origin main</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Website</category>
+      </categories>
+      <tags>
+        <tag>Home Page</tag>
+        <tag>Ruby</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Recommender Systems Amid the Rise of DL and LLMs</title>
+    <url>/2024/12/09/Recommender-LLM/</url>
+    <content><![CDATA[<p><a href="/images/recommender_llm/TechReview.pdf">Recommender System with LLM</a></p>
+]]></content>
+      <categories>
+        <category>Learn</category>
+      </categories>
+      <tags>
+        <tag>Recommender System</tag>
+        <tag>LLM</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Volatility Forecasting</title>
+    <url>/2023/12/15/Volatility_Forecasting/</url>
+    <content><![CDATA[<h1 id="Volatility-Forecasting-with-Machine-Learning-and-Intraday-Commonality"><a href="#Volatility-Forecasting-with-Machine-Learning-and-Intraday-Commonality" class="headerlink" title="Volatility Forecasting with Machine Learning and Intraday Commonality"></a>Volatility Forecasting with Machine Learning and Intraday Commonality</h1><h1 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h1><p>本文主要基于机器学习模型探索股票的commnality对预测realized volatility(RV)的影响，结论表明neural networks表现超过linear &amp; tree-based models，该结论在直接用未出现在训练集里的股票测试时同样成立，这说明了股票之间共同的volatility mechanism。文中最后利用过去的日内波动率来预测未来一天的波动率，预测效果能够超过传统只用daily RVs的方式，并观察到了time-of-day效应对预测的影响。</p>
+<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>HFT往往需要robust并且准确地预测日内波动率，Engle and Sokalska指出intraday volatility的预测对风险管理，衍生品定价，量化策略设计都有重要用途。但是学界缺少相关研究，大部分都是从日频收益出发，结果很难推广到日内。</p>
+<p>本文利用美国S&amp;P 500指数中流动性最好的100支股票从2011年7月到2021年6月的高频数据，研究了non-parametric ML models在forecast multi-asset intraday volatility上的表现。首先提出了日内波动率commonality的衡量方式，实验结果说明commnality能够提升预测表现，同时NNs在样本外表现也超出linear &amp; tree-based models。当应用训练集未出现的股票做测试时，同样获得较好的结果，降低了对复杂模型过拟合风险的担忧。最后，日内波动率能为预测未来daily波动率提供额外信息。</p>
+<h1 id="1-Related-Literature"><a href="#1-Related-Literature" class="headerlink" title="1. Related Literature"></a>1. Related Literature</h1><p>这里主要介绍了相关文献，第一部分是研究金融市场commonality，第二部分是预测daily波动率，但是预测日内波动率的关注较少，传统GARCH和SV 模型可能由于参数限制难以有效考虑金融变量间复杂且非线性的关系。第三，ML模型在金融领域潜力巨大，Bucci(2020)的研究表明RNNs在预测S&amp;P指数月度波动率方面能够超过传统计量经济的模型。</p>
+<h1 id="2-Data-and-RV"><a href="#2-Data-and-RV" class="headerlink" title="2. Data and RV"></a>2. Data and RV</h1><p>数据使用从2011-07-01到2021-06-30 S&amp;P index Top 100成分股的高频数据，筛选掉没有横跨整个周期的股票，剩余93支，板块分类如下：<br><img src="/images/vol_forecast/image.png" alt="Alt text1"></p>
+<p>$P_{i,t}$代表金融资产i的价格过程如下，$\mu_i$代表drift, $\sigma_{i,t}$代表顺势波动率，$W_t$是标准布朗运动</p>
+<p>$$<br>dlogP_{i,t} &#x3D; \mu_idt + \sigma_{i,t}dW_t<br>$$</p>
+<p>股票i在(t-b, t]之间的theoretical integrated variance表示为:<br>$$<br>IV_{i,t}(b) &#x3D; \int_{t-b}^{t}\sigma_{i,s}^2 ds<br>$$<br>b代表回看长度，如10min, 30min, 1天。每分钟的中间价对数收益为：</p>
+<p>$$<br>r_{i,t}:&#x3D;log(\frac{P_{i,t}}{P_{i,t-1}})<br>$$</p>
+<p>日内收益的平方和是IV的一致估计量，RV可以被当作IV的proxy，在(t-b, t]之间，RV被定义为：</p>
+<p>$$<br>RV_{i,t}^{(b)} :&#x3D; log[\sum_{s&#x3D;t-b+1}^t r_{i,s}^2]<br>$$</p>
+<p>overnight的信息不再考虑范围内。</p>
+<p>数据处理部分对收益做了0.5%的winsorize。下图可以看到整个样本里在不同回看周期上pairwise correlation的直方图，具体计算方式应该是每两只股票的RV或者return计算一个correlation，然后看整体数值，也就是$C_{93}^2$个数据点的分布，比较有趣的是日内随着b（回看窗口）的拉长，RV相关性实际会先上升，但到1-day又会降低，这说明股票间日内波动率的关联可能比daily波动率更稳定。<br><img src="/images/vol_forecast/image-1.png" alt="Alt text2"></p>
+<p>Figure2可以看到股票之间整体的daily RV的时序变化，两边quantile的弥散度在欧洲主权债务危机，中国股灾，英国脱欧，中美贸易战和COVID-19期间都明显紧缩，Figure 3可以看到30min RV在一天内形成的rever-J-shape.<br><img src="/images/vol_forecast/image-2.png" alt="Alt text3"><br><img src="/images/vol_forecast/image-3.png" alt="Alt text4"></p>
+<h1 id="3-Commonality-Estimation"><a href="#3-Commonality-Estimation" class="headerlink" title="3. Commonality Estimation"></a>3. Commonality Estimation</h1><p>这部分主要讲如何估计股票之间的commonality，主要利用如下回归的adjust $R^2$作为波动率commonality的衡量，其中$\mathrm{RV}_{M, t}^{(b)}$代表t时刻根据单个股票加权计算的市场波动率:</p>
+<p>$$<br>\mathrm{RV}<em>{M, t}^{(b)}&#x3D;\frac{1}{N} \sum</em>{i&#x3D;1}^N \mathrm{RV}<em>{i, t}^{(b)},\qquad \mathrm{RV}</em>{i, t}^{(b)}&#x3D;\alpha_i+\beta_i \mathrm{RV}<em>{M, t}^{(b)}+\epsilon</em>{i, t}<br>$$</p>
+<p>每月进行一次回归并在股票之间取平均，可以从Figure4看到日内的commonality现象是要比daily的更显著且稳定的。Figure5中展示了在交易时段每半个小时的commonality的均值和标准差，与之前波动率的J-curve不同，这里接近收盘commonality会逐渐上升。</p>
+<p><img src="/images/vol_forecast/image-4.png" alt="Alt text5"><br><img src="/images/vol_forecast/image-5.png" alt="Alt text6"></p>
+<h1 id="4-Methodology"><a href="#4-Methodology" class="headerlink" title="4. Methodology"></a>4. Methodology</h1><p>本节尝试利用股票之间的commonality来预测跨资产的波动率，整体模型可以表示为：<br>$$<br>\begin{aligned}<br>\mathrm{RV}<em>{i, t+b}^{(b)} &amp; &#x3D;F_i(\mathbf{u} ; \theta)+\epsilon</em>{i, t+b} \<br>&amp; &#x3D;F_i\left(\mathrm{RV}<em>{i, t}^{(b)}, \ldots, \mathrm{RV}</em>{i, t-(p-1) b}^{(b)}, \mathrm{RV}<em>{M, t}^{(b)}, \ldots, \mathrm{RV}</em>{M, t-(p-1) b}^{(b)} ; \theta\right)+\epsilon_{i, t+b}<br>\end{aligned}<br>$$<br>注意这里$\mathrm{RV}_{i, t+b}^{(b)}$代表的是未来波动率。输入特征包含两部分，首先是individual features，包含单个股票截止t已知的信息，另外是market features，聚合了所有股票包含t时刻已知的信息，$\theta$代表模型参数。模型的细节这里就不赘述了，基本介绍了Seasonal ARIMA, HAR with diurnal effects, OLS, Lasso&#x2F;Ridge, XGBoost, MLP以及LSTM。model训练部分会有三种方式，逐渐向其中加入cross asset和market information:</p>
+<ol>
+<li>Single: 只使用股票i的过去RVs作为特征</li>
+<li>Universal: 股票i还是只是本身特征，但是所有股票的数据放在一起训练</li>
+<li>Augmented: 股票i使用individual and market features，同样股票放在一起训练</li>
+</ol>
+<p>评价指标使用：</p>
+<ul>
+<li><p>Mean - squarederror (MSE): $\frac{1}{N} \sum_{i&#x3D;1}^N \frac{1}{T_{\text {test }}} \sum_{t \in \mathcal{T}<em>{\text {test }}}\left(\mathrm{RV}</em>{i, t}^{(b)}-\widehat{\mathrm{RV}}_{i, t}^{(b)}\right)^2$,</p>
+</li>
+<li><p>Quasi - likelihood (QLIKE): $\frac{1}{N} \sum_{i&#x3D;1}^N \frac{1}{T_{\text {trst }}} \sum_{t \in \mathcal{T}<em>{\text {test }}}\left[\frac{\exp \left(\mathrm{RV}</em>{i, t}^{(b)}\right)}{\exp \left(\widehat{\mathrm{RV}}<em>{i, t}^{(b)}\right)}-\left(\mathrm{RV}</em>{i, t}^{(b)}-\widehat{\mathrm{RV}}_{i, t}^{(b)}\right)-1\right]$</p>
+</li>
+</ul>
+<h1 id="5-Experiments"><a href="#5-Experiments" class="headerlink" title="5. Experiments"></a>5. Experiments</h1><p>数据集会被划分为: training, validation, testing，采用roll forward的方式，一年做validation, 一年testing，前面的日期都作为training。 MLP &amp; NNs会采用ensemble的方式，即在不同的初始化条件下训练多个模型后做平均。</p>
+<p><img src="/images/vol_forecast/image-6.png" alt="Alt text7"></p>
+<p>实验结果如上表所示，可以看到LSTM能够在日内表现最好，并且有着最高的realized utility。但是能看到，在1-day的时候,LASSO表现最好，这可能是因为数据稀缺性导致的(相比日内)。Figure 7中展示了不同trading shcema下QLIKEs的差值，即$\Delta QLIKE$, 该数值越负代表out of sample表现的提升，可以看到Universal相比Single的提升其实并不名贡献，但是加入市场的信息后提高了预测表现。</p>
+<p><img src="/images/vol_forecast/image-7.png" alt="Alt text8"></p>
+<p>另外一个值得思考的问题是Universal或Augmented setting的提升是否与股票的commonality有联系。从Figure8可以看到，样本外的QLIKE是会随着股票commonality的提升而下降的。<br><img src="/images/vol_forecast/image-8.png" alt="Alt text9"></p>
+<p>为了测试拟合模型的generalization能力，可以使用训练集里未出现的股票来测试模型，记录模型使用的股票为raw stocks, 新的测试股票为unseen stocks, Figure 9展示了得到的结果，能够得出结论，在聚合的股票池上训练出的NN模型有更好的预测能力，为股票间的<em>universal volatility mechanism</em>提供了证据。</p>
+<p><img src="/images/vol_forecast/image-9.png" alt="Alt text10"></p>
+<h1 id="6-Forecasting-Daily-RVs-with-Intraday-RVs"><a href="#6-Forecasting-Daily-RVs-with-Intraday-RVs" class="headerlink" title="6. Forecasting Daily RVs with Intraday RVs"></a>6. Forecasting Daily RVs with Intraday RVs</h1><p>从前述实验可以看到预测日内波动率时股票之间commonality的作用，这里对利用日内波动率来预测未来的daily波动率进行研究，介绍了<em>Intraday2Daily</em>的方式，模型为：</p>
+<p>$$<br>\mathrm{RV}<em>{i, t+1}^{(d)}&#x3D;F_i\left(\mathrm{RV}</em>{i, t}^{(b)}, \ldots, \mathrm{RV}<em>{i, t-(p-1) b}^{(b)}, \mathrm{RV}</em>{i, t-1}^{(d)}, \ldots, \mathrm{RV}<em>{i, t-(p-1)}^{(d)} ; \theta\right)+\epsilon</em>{i, t+1}<br>$$<br>这里，前半部分$\left(\mathrm{RV}<em>{i, t}^{(b)}, \ldots, \mathrm{RV}</em>{i, t-(k-1) b}^{(b)}\right)$代表股票i在日内horizon b上的波动率，后半部分$\left(\mathrm{RV}<em>{i, t-1}^{(d)}, \ldots, \mathrm{RV}</em>{i, t-(p-1)}^{(d)}\right)$代表过去daily RVs，但是只截止到t-1天，相当于用t天的日内波动率和t-1之前的daily RVs来预测未来RVs。</p>
+<p><img src="/images/vol_forecast/image-10.png" alt="Alt text11"></p>
+<p><img src="/images/vol_forecast/image-11.png" alt="Alt text12"></p>
+<p>与之前的实验结果相比，这种方式能够提升基准模型的表现，使用了日间信息的MLP模型达到了最好的表现，同时也达到了更高的utilities。最后，这里还研究了time-of-day的现象，使用上述实验最近一天OLS model intraday RV的系数进行比较，可以看到，接近收盘的波动率时最重要的指标，而非白天的波动模式。有数据表明收盘半小时会占据美国市场3000支股票2020年前几个月约23%的交易量，这也使得收盘前的波动率成为预测下一日波动率的重要信息。<br><img src="/images/vol_forecast/image-12.png" alt="Alt text13"></p>
+<p>这篇文章对股票的commonality进行了详细研究，并且比较了不同模型和setting下的表现， NN因为能够捕捉predictors之间的复杂关系而有着更好的表现，同时训练出的模型也展示出了一定的泛化能力，即在未见过的股票上进行预测。最后，利用日内波动率预测daily RVs有一定效果，同时也能观察到收盘前波动率的重要性。受限于篇幅，很多细节没有展开，大家感兴趣可以参考原文。</p>
+]]></content>
+      <categories>
+        <category>Learn</category>
+      </categories>
+      <tags>
+        <tag>quantitative finance</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Equations of Mathematical Physics Course Page</title>
+    <url>/2021/03/05/mathematical-physics/</url>
+    <content><![CDATA[<p>Click Here: <a href="https://zhaoxing-zstar.github.io/Equations-of-Mathematical-Physics/">Equations of Mathematical Physics</a></p>
+]]></content>
+      <categories>
+        <category>Learn</category>
+      </categories>
+      <tags>
+        <tag>mathematical physics</tag>
       </tags>
   </entry>
 </search>

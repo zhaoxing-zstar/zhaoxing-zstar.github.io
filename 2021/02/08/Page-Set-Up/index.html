@@ -88,7 +88,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">153</span>
+            <span class="post-count">159</span>
         </span>
     </span>
 
@@ -115,6 +115,8 @@
   <h3 id="NPM-amp-Hexo-Setup"><a href="#NPM-amp-Hexo-Setup" class="headerlink" title="NPM &amp; Hexo Setup"></a>NPM &amp; Hexo Setup</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update \\</span><br><span class="line">sudo apt install nodejs \\</span><br><span class="line">sudo apt install npm \\</span><br><span class="line">node -v \\</span><br><span class="line">npm -v \\</span><br><span class="line">npm install -g hexo-cli \\</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;PATH=&quot;$PATH:./node_modules/.bin&quot;&#x27;</span> &gt;&gt; ~/.profile</span><br></pre></td></tr></table></figure>
 
 <h3 id="Hexo-Commands"><a href="#Hexo-Commands" class="headerlink" title="Hexo Commands"></a>Hexo Commands</h3><p>check at: <a target="_blank" rel="noopener" href="https://hexo.io/docs/commands">https://hexo.io/docs/commands</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo deploy</span><br></pre></td></tr></table></figure>
+
 <p>Ref: <a target="_blank" rel="noopener" href="https://shen-yu.github.io/2019/ayer/">Ayer中文说明</a>. All modifications for this website should be done in <code>themes</code> folder, instead of <code>public</code> folder</p>
 <h3 id="Git-Setup"><a href="#Git-Setup" class="headerlink" title="Git Setup"></a>Git Setup</h3><p>Git cheatsheet: <a target="_blank" rel="noopener" href="https://education.github.com/git-cheat-sheet-education.pdf">cheatsheet</a> </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#clone from websit</span></span><br><span class="line">git <span class="built_in">clone</span> XXX.git</span><br><span class="line"></span><br><span class="line"><span class="comment"># generate private &amp; public key</span></span><br><span class="line">ssh -t rsa -C <span class="string">&quot;email@XX.com&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># upload public key to github, test with:</span></span><br><span class="line">ssh git@github.com</span><br><span class="line"></span><br><span class="line"><span class="comment">#set up configs</span></span><br><span class="line">git config --global user.name <span class="string">&quot;name&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;email&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#handle proxy error</span></span><br><span class="line">git config --global --<span class="built_in">unset</span> http.proxy</span><br><span class="line">git config --global --<span class="built_in">unset</span> https.proxy</span><br><span class="line"></span><br><span class="line"><span class="comment">#make changes and submit</span></span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&quot;message&quot;</span></span><br><span class="line">git add remote origin <span class="string">&quot;reop.git&quot;</span></span><br><span class="line">git psuh origin main</span><br></pre></td></tr></table></figure> 
@@ -223,7 +225,7 @@
     <ul>
       <li>
         Copyrights &copy;
-        2022-2024
+        2022-2025
         <i class="ri-heart-fill heart_icon"></i> Zstar
       </li>
     </ul>
